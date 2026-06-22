@@ -140,7 +140,7 @@ document.querySelectorAll('.room-tab').forEach(tab => {
 ============================================ */
 const WILDLIFE = [
   { name: 'Avestruces', en: 'Ostriches', img: 'IMG/avestruz.JPG', feed: true, desc: 'Nuestras imponentes avestruces son una de las atracciones preferidas. Puedes verlas de cerca y alimentarlas de forma segura con el kit de comida balanceada provisto por la administración.' },
-  { name: 'Llamas', en: 'Llamas', img: 'IMG/llamas.png', feed: true, desc: 'Curiosas, amigables y muy mansas. Les encanta interactuar con las familias y recibir alimento directamente de la mano de los visitantes. Una experiencia hermosa para los niños.' },
+  { name: 'Llamas', en: 'Llamas', img: 'IMG/llamas.jpg', feed: true, desc: 'Curiosas, amigables y muy mansas. Les encanta interactuar con las familias y recibir alimento directamente de la mano de los visitantes. Una experiencia hermosa para los niños.' },
   { name: 'Venados', en: 'Deer', img: 'IMG/venado.JPG', feed: false, desc: 'Especies esbeltas y tímidas que aportan paz al paisaje. Se encuentran en su zona reservada para garantizar su tranquilidad; se observan en silencio para no asustarlos.' },
   { name: 'Caballos', en: 'Horses', img: 'IMG/caballos.JPG', feed: false, desc: 'Ejemplares dóciles y majestuosos que representan el alma campestre de La Martina. Excelentes para contemplar y tomar fotografías con el atardecer de fondo.' },
   { name: 'Capybaras', en: 'Capybaras', img: 'IMG/capibara.jpg', feed: false, desc: 'Nuestros capibaras son animales tranquilos y pacíficos que disfrutan de las zonas húmedas y pastizales. Son sumamente dóciles y una de las sorpresas naturales del santuario.' },
