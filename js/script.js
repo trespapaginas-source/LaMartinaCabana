@@ -20,7 +20,7 @@ const reservationState = {
 
 const PLANS = {
   daypass: { name: 'Pasadía Diurno (Day Pass)', price: 1200000, deposit: 360000, maxGuests: 20, overnight: false },
-  overnight: { name: 'Alojamiento Completo (Overnight)', price: 3000000, deposit: 1000000, maxGuests: 14, overnight: true },
+  overnight: { name: 'Alojamiento Completo (Overnight)', price: 3000000, deposit: 1000000, maxGuests: 10, overnight: true },
 };
 
 /* ============================================
@@ -91,7 +91,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 const ROOMS = {
   1: { title: 'Habitación Familiar 01', eyebrow: 'Habitación 01 · Familiar', desc: 'Dos camas litera cómodas, capacidad para cuatro huéspedes. Aire acondicionado, baño privado y televisión. Ropa de cama suave y limpia.', img: 'IMG/h1.jpg' },
   2: { title: 'Habitación Familiar 02', eyebrow: 'Habitación 02 · Familiar', desc: 'Dos camas litera adicionales con la misma distribución cómoda. Cuatro huéspedes más, baño privado independiente and aire acondicionado.', img: 'IMG/h2.jpg' },
-  3: { title: 'Habitación Matrimonial 03', eyebrow: 'Habitación 03 · Matrimonial', desc: 'Una cama principal con configuraciones modulares que admiten de dos a seis huéspedes. Baño privado, aire acondicionado y televisión.', img: 'IMG/h3.jpg' },
+  3: { title: 'Habitación Matrimonial 03', eyebrow: 'Habitación 03 · Matrimonial', desc: 'Una cama principal cómoda, con capacidad para máximo dos huéspedes. Baño privado, aire acondicionado y televisión.', img: 'IMG/h3.jpg' },
 };
 document.querySelectorAll('.room-tab').forEach(tab => {
   tab.addEventListener('click', () => {
