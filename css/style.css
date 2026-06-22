@@ -431,6 +431,7 @@ video::-webkit-media-controls-enclosure {
 .wa-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
 /* Responsive aspect ratio for 360 Tour container to prevent image cropping */
