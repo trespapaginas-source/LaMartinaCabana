@@ -20,7 +20,7 @@ const reservationState = {
 
 const PLANS = {
   daypass: { name: 'Pasadía Diurno (Day Pass)', price: 1200000, deposit: 360000, maxGuests: 20, overnight: false },
-  overnight: { name: 'Alojamiento Completo (Overnight)', price: 3000000, deposit: 1000000, maxGuests: 10, overnight: true },
+  overnight: { name: 'Alojamiento Completo (Overnight)', price: 3000000, deposit: 1000000, maxGuests: 14, overnight: true },
 };
 
 /* ============================================
