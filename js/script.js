@@ -199,6 +199,13 @@ if (animalDialog) {
    INLINE 360 TOUR FUNCTIONALITY
 ============================================ */
 function loadTour360() {
+  const iframe = document.getElementById('tour-iframe');
+  if (iframe) {
+    const src = iframe.getAttribute('data-src');
+    if (src && (iframe.src === '' || iframe.src === 'about:blank' || iframe.getAttribute('src') === 'about:blank')) {
+      iframe.setAttribute('src', src);
+    }
+  }
   const cover = document.getElementById('tour-cover');
   if (cover) {
     cover.style.opacity = '0';
@@ -520,5 +527,58 @@ Quedo atento/a a la confirmación de disponibilidad y a las instrucciones para e
       video.classList.add('opacity-100');
       picture.classList.add('opacity-0');
     });
+  }
+})();
+
+/* ============================================
+   MOBILE-ONLY LAZY LOADING OF IFRAMES
+============================================ */
+(function initLazyIframes() {
+  const runInit = () => {
+    const isDesktop = window.innerWidth >= 768;
+
+    // Google Maps Iframe Setup
+    const mapIframe = document.querySelector('iframe.map-grayscale');
+    if (mapIframe) {
+      if (isDesktop) {
+        // Load immediately on desktop
+        const src = mapIframe.getAttribute('data-src');
+        if (src) {
+          mapIframe.setAttribute('src', src);
+          mapIframe.removeAttribute('data-src');
+        }
+      } else {
+        // Lazy load on mobile using IntersectionObserver
+        const mapObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const src = mapIframe.getAttribute('data-src');
+              if (src) {
+                mapIframe.setAttribute('src', src);
+                mapIframe.removeAttribute('data-src');
+              }
+              mapObserver.unobserve(mapIframe);
+            }
+          });
+        }, { rootMargin: '200px' });
+        mapObserver.observe(mapIframe);
+      }
+    }
+
+    // 360 Tour Iframe Setup
+    const tourIframe = document.getElementById('tour-iframe');
+    if (tourIframe && isDesktop) {
+      // Load immediately on desktop to match previous desktop preloaded behavior
+      const src = tourIframe.getAttribute('data-src');
+      if (src) {
+        tourIframe.setAttribute('src', src);
+      }
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runInit);
+  } else {
+    runInit();
   }
 })();
