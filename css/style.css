@@ -486,3 +486,9 @@ dialog[open]::backdrop {
   }
 }
 
+/* Offset anchor scrolling to account for fixed header */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+
