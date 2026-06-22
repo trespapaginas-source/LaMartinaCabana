@@ -494,6 +494,21 @@ dialog[open]::backdrop {
   }
 }
 
+/* Mobile Hero Zoom Animation */
+.hero-mobile-img {
+  animation: subtleZoom 15s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+@keyframes subtleZoom {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
 /* Offset anchor scrolling to account for fixed header */
 section[id] {
   scroll-margin-top: 100px;
