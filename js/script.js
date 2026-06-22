@@ -1,28 +1,4 @@
-/* ============================================
-   TAILWIND CONFIGURATION
-============================================ */
-window.addEventListener('load', () => {
-  if (window.tailwind) {
-    window.tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            olive: '#555b00',
-            gold: '#be7f00',
-            sand: '#f6efe5',
-            carbon: '#1c1c1a',
-            surface: '#242422',
-            light: '#eae3d5',
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-        }
-      }
-    };
-  }
-});
+
 
 /* ============================================
    STATE ENGINE
@@ -140,12 +116,12 @@ document.querySelectorAll('.room-tab').forEach(tab => {
    WILDLIFE SANCTUARY
 ============================================ */
 const WILDLIFE = [
-  { name: 'Avestruces', en: 'Ostriches', img: 'IMG/avestruz.JPG', feed: true, desc: 'Nuestras imponentes avestruces son una de las atracciones preferidas. Puedes verlas de cerca y alimentarlas de forma segura con el kit de comida balanceada provisto por la administración.' },
-  { name: 'Llamas', en: 'Llamas', img: 'IMG/llamas.jpg', feed: true, desc: 'Curiosas, amigables y muy mansas. Les encanta interactuar con las familias y recibir alimento directamente de la mano de los visitantes. Una experiencia hermosa para los niños.' },
-  { name: 'Venados', en: 'Deer', img: 'IMG/venado.JPG', feed: false, desc: 'Especies esbeltas y tímidas que aportan paz al paisaje. Se encuentran en su zona reservada para garantizar su tranquilidad; se observan en silencio para no asustarlos.' },
-  { name: 'Caballos', en: 'Horses', img: 'IMG/caballos.JPG', feed: false, desc: 'Ejemplares dóciles y majestuosos que representan el alma campestre de La Martina. Excelentes para contemplar y tomar fotografías con el atardecer de fondo.' },
-  { name: 'Capybaras', en: 'Capybaras', img: 'IMG/capibara.jpg', feed: false, desc: 'Nuestros capibaras son animales tranquilos y pacíficos que disfrutan de las zonas húmedas y pastizales. Son sumamente dóciles y una de las sorpresas naturales del santuario.' },
-  { name: 'Guacamayas', en: 'Macaws', img: 'IMG/guacamayas.jpg', feed: true, desc: 'Aves de colores vibrantes y gran inteligencia. Llenan la cabaña de vida y canto. Puedes interactuar con ellas respetando las indicaciones de su cuidador.' },
+  { name: 'Avestruces', en: 'Ostriches', img: 'IMG/avestruz.JPG', w: 800, h: 600, feed: true, desc: 'Nuestras imponentes avestruces son una de las atracciones preferidas. Puedes verlas de cerca y alimentarlas de forma segura con el kit de comida balanceada provisto por la administración.' },
+  { name: 'Llamas', en: 'Llamas', img: 'IMG/llamas.jpg', w: 960, h: 629, feed: true, desc: 'Curiosas, amigables y muy mansas. Les encanta interactuar con las familias y recibir alimento directamente de la mano de los visitantes. Una experiencia hermosa para los niños.' },
+  { name: 'Venados', en: 'Deer', img: 'IMG/venado.JPG', w: 1200, h: 1600, feed: false, desc: 'Especies esbeltas y tímidas que aportan paz al paisaje. Se encuentran en su zona reservada para garantizar su tranquilidad; se observan en silencio para no asustarlos.' },
+  { name: 'Caballos', en: 'Horses', img: 'IMG/caballos.JPG', w: 1600, h: 1200, feed: false, desc: 'Ejemplares dóciles y majestuosos que representan el alma campestre de La Martina. Excelentes para contemplar y tomar fotografías con el atardecer de fondo.' },
+  { name: 'Capybaras', en: 'Capybaras', img: 'IMG/capibara.jpg', w: 1600, h: 2193, feed: false, desc: 'Nuestros capibaras son animales tranquilos y pacíficos que disfrutan de las zonas húmedas y pastizales. Son sumamente dóciles y una de las sorpresas naturales del santuario.' },
+  { name: 'Guacamayas', en: 'Macaws', img: 'IMG/guacamayas.jpg', w: 1600, h: 1067, feed: true, desc: 'Aves de colores vibrantes y gran inteligencia. Llenan la cabaña de vida y canto. Puedes interactuar con ellas respetando las indicaciones de su cuidador.' },
 ];
 
 const wlScroll = document.getElementById('wildlife-scroll');
@@ -155,7 +131,7 @@ if (wlScroll) {
     card.className = 'wildlife-card border border-carbon/10 bg-sand cursor-pointer hover:shadow-lg transition-all duration-300';
     card.innerHTML = `
       <div class="img-wrap h-56 overflow-hidden">
-        <img src="${a.img}" alt="${a.name} en Cabaña La Martina Sabanagrande" loading="lazy" class="w-full h-full object-cover"/>
+        <img src="${a.img}" alt="${a.name} en Cabaña La Martina Sabanagrande" width="${a.w}" height="${a.h}" loading="lazy" class="w-full h-full object-cover"/>
       </div>
       <div class="p-5">
         <div class="flex items-center justify-between mb-2">

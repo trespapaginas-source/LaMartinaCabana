@@ -26,11 +26,17 @@
   <meta property="og:locale" content="es_CO" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://cabana-lamartina.com" />
+
+  <!-- Preloads for Hero Images (LCP Optimization) -->
+  <link rel="preload" href="IMG/hero-web.webp" as="image" type="image/webp" media="(min-width: 768px)" fetchpriority="high" />
+  <link rel="preload" href="IMG/hero-movil.webp" as="image" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
+
   <!-- SEO Local & Performance (Preconnects) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://code.iconify.design">
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 
   <!-- Datos Estructurados (Schema.org / JSON-LD) -->
   <script type="application/ld+json">
@@ -66,7 +72,7 @@
 </script>
 
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="css/tailwind.min.css" />
   <!-- Iconify -->
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
 
@@ -96,7 +102,7 @@
   <header id="nav" class="fixed top-0 left-0 right-0 z-[100] nav-top">
     <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
       <a href="#hero" class="nav-brand flex items-center">
-        <img src="IMG/logo-positivo.webp" alt="Logo Cabaña La Martina" class="h-[67px] lg:h-[84px] logo-hero">
+        <img src="IMG/logo-positivo.webp" alt="Logo Cabaña La Martina" width="1254" height="1254" class="h-[67px] lg:h-[84px] logo-hero">
       </a>
       <nav class="hidden lg:flex items-center gap-9 text-[11px] tracking-[0.24em] uppercase text-white/90 font-medium">
         <a href="#amenidades" class="nav-link"><span class="text-gold/80 mr-1.5">01</span>Amenidades</a>
@@ -139,7 +145,7 @@
       <section class="block md:hidden relative h-screen min-h-[650px] w-full overflow-hidden">
         <picture class="absolute inset-0 w-full h-full object-cover">
           <source srcset="IMG/hero-movil.webp" type="image/webp">
-          <img src="IMG/hero-movil.webp" alt="Cabaña La Martina" class="w-full h-full object-cover">
+          <img src="IMG/hero-movil.webp" alt="Cabaña La Martina" width="1200" height="1600" class="w-full h-full object-cover">
         </picture>
         <div class="absolute inset-0 hero-overlay"></div>
 
@@ -179,7 +185,7 @@
         </video>
         <picture id="hero-picture" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
           <source media="(min-width: 769px)" srcset="IMG/hero-web.webp" type="image/webp">
-          <img src="IMG/hero-web.webp" alt="Cabaña La Martina" class="w-full h-full object-cover">
+          <img src="IMG/hero-web.webp" alt="Cabaña La Martina" width="1920" height="1080" class="w-full h-full object-cover">
         </picture>
         <div class="absolute inset-0 hero-overlay"></div>
 
@@ -226,7 +232,7 @@
           <div class="lg:col-span-7 reveal">
             <div class="img-zoom relative aspect-[4/3] lg:aspect-auto lg:h-[620px]">
               <img src="IMG/principal interior.jpg" alt="Fachada de Cabaña La Martina en Sabanagrande Atlántico"
-                loading="lazy" class="w-full h-full object-cover" />
+                width="1600" height="1200" loading="lazy" class="w-full h-full object-cover" />
               <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 bg-gradient-to-t from-carbon/85 to-transparent">
                 <p class="text-white/90 text-xs tracking-[0.3em] uppercase">Arquitectura campestre · Un espacio para
                   compartir</p>
@@ -289,7 +295,7 @@
           <!-- Column A -->
           <article class="lux-card reveal bg-sand border border-carbon/10 overflow-hidden">
             <div class="img-zoom h-64 overflow-hidden">
-              <img src="IMG/hidromasaje.jpg" alt="Piscina y jacuzzi privado en Cabaña La Martina" loading="lazy"
+              <img src="IMG/hidromasaje.jpg" alt="Piscina y jacuzzi privado en Cabaña La Martina" width="1600" height="900" loading="lazy"
                 class="w-full h-full object-cover" />
             </div>
             <div class="p-8 lg:p-9">
@@ -315,7 +321,7 @@
           <!-- Column B -->
           <article class="lux-card reveal reveal-delay-1 bg-sand border border-carbon/10 overflow-hidden">
             <div class="img-zoom h-64 overflow-hidden">
-              <img src="IMG/cocina.jpg" alt="Cocina equipada en Cabaña La Martina" loading="lazy"
+              <img src="IMG/cocina.jpg" alt="Cocina equipada en Cabaña La Martina" width="1600" height="1200" loading="lazy"
                 class="w-full h-full object-cover" />
             </div>
             <div class="p-8 lg:p-9">
@@ -340,7 +346,7 @@
           <!-- Column C -->
           <article class="lux-card reveal reveal-delay-2 bg-sand border border-carbon/10 overflow-hidden">
             <div class="img-zoom h-64 overflow-hidden">
-              <img src="IMG/sendero%20animales.jpg" alt="Senderos y animales en Cabaña La Martina" loading="lazy"
+              <img src="IMG/sendero%20animales.jpg" alt="Senderos y animales en Cabaña La Martina" width="1448" height="1086" loading="lazy"
                 class="w-full h-full object-cover" />
             </div>
             <div class="p-8 lg:p-9">
@@ -418,28 +424,22 @@
           </div>
 
           <div class="lg:col-span-7 reveal reveal-delay-1">
-            <!-- Parent Container: desktop has img-zoom, overflow-hidden, and h-[680px]. Mobile has flex-col. -->
             <div class="img-zoom relative flex flex-col lg:block lg:overflow-hidden lg:h-[680px]">
-              <!-- Image Wrapper: mobile has aspect-[4/3], desktop has absolute inset-0 -->
               <div
                 class="relative w-full aspect-[4/3] lg:absolute lg:inset-0 lg:h-full lg:w-full lg:aspect-auto overflow-hidden">
-                <img id="room-image" src="IMG/h1.jpg" alt="Habitación familiar en Cabaña La Martina Sabanagrande"
-                  loading="lazy" class="w-full h-full object-cover transition-opacity duration-700" />
+                  <img id="room-image" src="IMG/h1.jpg" alt="Habitación familiar en Cabaña La Martina Sabanagrande"
+                    width="1600" height="1060" loading="lazy" class="w-full h-full object-cover transition-opacity duration-700" />
               </div>
-              <!-- Gradient Overlay (Only visible on desktop) -->
               <div
                 class="hidden lg:block absolute inset-0 bg-gradient-to-t from-carbon/70 via-transparent to-transparent pointer-events-none">
               </div>
-              <!-- Text Wrapper: mobile has relative bg-surface p-6, desktop has absolute bottom-0 left-0 right-0 p-8 lg:p-10 lg:bg-transparent -->
               <div
                 class="relative lg:absolute lg:bottom-0 lg:left-0 lg:right-0 p-6 sm:p-8 lg:p-10 bg-surface lg:bg-transparent">
-                <!-- Flex container: mobile has flex-col, desktop has row-based gap-6 -->
                 <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                   <div>
                     <div class="eyebrow text-gold mb-3" id="room-eyebrow">Habitación 01 · Familiar</div>
                     <h3 class="font-serif text-2xl lg:text-4xl text-sand" id="room-title">Habitación Familiar 01</h3>
                   </div>
-                  <!-- Amenities container: mobile has flex-wrap gap-x-6 gap-y-2, desktop has gap-6 -->
                   <div class="flex flex-wrap lg:flex-nowrap gap-x-6 gap-y-2 lg:gap-6 text-sand/85 text-sm">
                     <div class="flex items-center gap-2"><iconify-icon icon="ph:wind-light" width="18"
                         class="text-gold"></iconify-icon> A/C</div>
@@ -482,7 +482,6 @@
           </div>
         </div>
 
-        <!-- Ecological rule card -->
         <div class="bg-olive text-sand p-8 lg:p-10 mb-12 reveal grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div class="md:col-span-1 flex md:justify-center">
             <iconify-icon icon="ph:leaf-light" width="48" class="text-gold"></iconify-icon>
@@ -509,21 +508,19 @@
           </div>
         </div>
 
-        <!-- Horizontal scroll -->
         <div class="reveal reveal-delay-1">
           <div class="flex items-center justify-between mb-6">
             <p class="eyebrow text-carbon/60">Especies que conocerás · Deslice horizontalmente</p>
             <div class="flex gap-3">
-              <button onclick="scrollWildlife(-1)"
+              <button onclick="scrollWildlife(-1)" aria-label="Desplazar carrusel de animales a la izquierda"
                 class="w-10 h-10 border border-carbon/20 flex items-center justify-center hover:bg-carbon hover:text-sand transition"><iconify-icon
                   icon="ph:arrow-left-light" width="18"></iconify-icon></button>
-              <button onclick="scrollWildlife(1)"
+              <button onclick="scrollWildlife(1)" aria-label="Desplazar carrusel de animales a la derecha"
                 class="w-10 h-10 border border-carbon/20 flex items-center justify-center hover:bg-carbon hover:text-sand transition"><iconify-icon
                   icon="ph:arrow-right-light" width="18"></iconify-icon></button>
             </div>
           </div>
           <div id="wildlife-scroll" class="flex gap-5 overflow-x-auto no-scrollbar pb-4 -mx-6 px-6 lg:mx-0 lg:px-0">
-            <!-- Wildlife cards generated below -->
           </div>
         </div>
       </div>
@@ -697,7 +694,7 @@
                   <source media="(max-width: 768px)" srcset="IMG/fondo-celular.webp" type="image/webp">
                   <source media="(min-width: 769px)" srcset="IMG/fondo-web.webp" type="image/webp">
                   <img src="IMG/fondo-web.webp" alt="Tour Virtual 360 Cabaña La Martina"
-                    class="w-full h-full object-cover">
+                    width="1484" height="1060" class="w-full h-full object-cover">
                 </picture>
               </div>
             </div>
@@ -813,11 +810,11 @@
             <p class="text-carbon/60 text-center text-sm mb-10">Información de contacto para coordinar tu llegada.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-2xl mx-auto">
               <div>
-                <label class="eyebrow text-carbon/60 mb-3 block">Nombre completo</label>
+                <label for="guest-name" class="eyebrow text-carbon/60 mb-3 block">Nombre completo</label>
                 <input type="text" id="guest-name" class="lux-input" placeholder="Tu nombre" />
               </div>
               <div>
-                <label class="eyebrow text-carbon/60 mb-3 block">Teléfono / WhatsApp (Opcional)</label>
+                <label for="guest-phone" class="eyebrow text-carbon/60 mb-3 block">Teléfono / WhatsApp (Opcional)</label>
                 <input type="tel" id="guest-phone" class="lux-input" placeholder="+57 300 000 0000" />
               </div>
             </div>
@@ -857,11 +854,11 @@
               diurna.</p>
             <div class="max-w-md mx-auto">
               <div class="flex items-center justify-between mb-6">
-                <button onclick="changeMonth(-1)"
+                <button onclick="changeMonth(-1)" aria-label="Mes anterior"
                   class="w-10 h-10 border border-carbon/30 flex items-center justify-center hover:bg-carbon hover:text-sand"><iconify-icon
                     icon="ph:caret-left-light" width="18"></iconify-icon></button>
                 <div class="font-serif text-xl" id="cal-month-label"></div>
-                <button onclick="changeMonth(1)"
+                <button onclick="changeMonth(1)" aria-label="Mes siguiente"
                   class="w-10 h-10 border border-carbon/30 flex items-center justify-center hover:bg-carbon hover:text-sand"><iconify-icon
                     icon="ph:caret-right-light" width="18"></iconify-icon></button>
               </div>
@@ -1034,7 +1031,7 @@
     <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-14">
         <div class="md:col-span-5">
-          <img src="IMG/logo-positivo.webp" alt="Logo Cabaña La Martina" class="h-[78px] lg:h-[84px] mb-5">
+          <img src="IMG/logo-positivo.webp" alt="Logo Cabaña La Martina" width="1254" height="1254" class="h-[78px] lg:h-[84px] mb-5">
           <p class="text-sand/60 text-sm leading-relaxed max-w-md">Una cabaña privada en Sabanagrande, Atlántico.
             Naturaleza, descanso y diversión en familia o con amigos.</p>
         </div>
@@ -1099,7 +1096,7 @@
       <!-- Header -->
       <div class="bg-[#075E54] text-white p-4 flex items-center gap-3">
         <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-          <img src="IMG/logo-positivo.webp" alt="La Martina" class="h-8 w-8 object-contain">
+          <img src="IMG/logo-positivo.webp" alt="La Martina" width="1254" height="1254" class="h-8 w-8 object-contain">
         </div>
         <div class="flex-1">
           <div class="font-semibold text-sm">Concierge La Martina</div>
@@ -1107,7 +1104,7 @@
             <span class="w-2 h-2 bg-green-400 rounded-full"></span> En línea ahora
           </div>
         </div>
-        <button onclick="toggleChatbox()" class="text-white/80 hover:text-white">
+        <button onclick="toggleChatbox()" aria-label="Cerrar chat de WhatsApp" class="text-white/80 hover:text-white">
           <iconify-icon icon="ph:x-light" width="20"></iconify-icon>
         </button>
       </div>
@@ -1123,7 +1120,7 @@
         <input type="text" id="wa-input"
           class="flex-1 bg-white rounded-full px-4 py-2 text-sm border border-carbon/10 focus:outline-none focus:border-[#25D366]"
           placeholder="Escribe tu mensaje...">
-        <button onclick="sendWaMessage()"
+        <button onclick="sendWaMessage()" aria-label="Enviar mensaje de WhatsApp"
           class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center text-white hover:bg-[#1da851] transition">
           <iconify-icon icon="ph:paper-plane-right-fill" width="18"></iconify-icon>
         </button>
@@ -1131,7 +1128,7 @@
     </div>
 
     <!-- Floating Button -->
-    <button id="wa-fab" onclick="toggleChatbox()"
+    <button id="wa-fab" onclick="toggleChatbox()" aria-label="Abrir chat de WhatsApp"
       class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform relative pointer-events-auto">
       <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
       <iconify-icon icon="ph:whatsapp-logo-fill" width="32" class="text-white relative z-10"></iconify-icon>
