@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabaña La Martina | Alquiler de Cabaña Privada en Sabanagrande, Atlántico</title>
+  <meta name="description"
+    content="Disfruta de una cabaña totalmente privada en Sabanagrande, Atlántico. Alquila toda la propiedad en exclusiva para tu familia o amigos: piscina, jacuzzi, amplios jardines y contacto directo con la naturaleza. A solo 30 minutos de Barranquilla." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.ibb.co/sDWP9GC/logo-La-Martina-favicon-1.png" />
+
+  <!-- Open Graph / Social Media SEO -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cabaña La Martina | Escape Natural en Sabanagrande, Atlántico" />
+  <meta property="og:description"
+    content="Cabaña privada en Sabanagrande, Atlántico. Disfruta en familia o con amigos: piscina, jacuzzi, fauna y naturaleza. A 30 min de Barranquilla." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:url" content="https://cabana-lamartina.com" />
+  <meta property="og:locale" content="es_CO" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- SEO Local & Performance (Preconnects) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://code.iconify.design">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+  <!-- Datos Estructurados (Schema.org / JSON-LD) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Cabaña La Martina",
+  "description": "Cabaña totalmente privada en Sabanagrande, Atlántico. Alquiler exclusivo para familias o grupos. Piscina, jacuzzi, fauna y naturaleza.",
+  "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+  "telephone": "+573015780509",
+  "url": "https://cabana-lamartina.com",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sabanagrande",
+    "addressRegion": "Atlántico",
+    "addressCountry": "CO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 10.7650,
+    "longitude": -74.7550
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Piscina Privada", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Jacuzzi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Aire Acondicionado", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pet Friendly", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Parqueadero Privado", "value": true }
+  ]
+}
+</script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom script -->
+  <script src="js/script.js" defer></script>
+</head>
+
+<body class="bg-sand text-carbon">
+
+  <!-- ====================== NOTIFICATION ====================== -->
+  <div id="notification"
+    class="notif-hidden fixed top-24 left-1/2 z-[120] bg-carbon text-sand px-7 py-4 shadow-2xl border-l-2 border-gold max-w-md">
+    <div class="flex items-start gap-3">
+      <iconify-icon icon="ph:warning-circle-light" width="20" class="text-gold mt-0.5"></iconify-icon>
+      <p id="notif-text" class="text-sm tracking-wide"></p>
+    </div>
+  </div>
+
+  <!-- ====================== NAVIGATION ====================== -->
+  <header id="nav" class="fixed top-0 left-0 right-0 z-[100] nav-top">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+      <a href="#hero" class="nav-brand flex items-center">
+        <img src="IMG/logo-positivo.webp" alt="Logo Cabaña La Martina" class="h-[67px] lg:h-[84px] logo-hero">
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 text-[11px] tracking-[0.24em] uppercase text-white/90 font-medium">
+        <a href="#amenidades" class="nav-link"><span class="text-gold/80 mr-1.5">01</span>Amenidades</a>
+        <a href="#aposentos" class="nav-link"><span class="text-gold/80 mr-1.5">02</span>Habitaciones</a>
+        <a href="#santuario" class="nav-link"><span class="text-gold/80 mr-1.5">03</span>Animales</a>
+        <a href="#tarifas" class="nav-link"><span class="text-gold/80 mr-1.5">04</span>Tarifas</a>
+        <a href="#ubicacion" class="nav-link"><span class="text-gold/80 mr-1.5">05</span>Ubicación</a>
+      </nav>
+      <a href="#reserva"
+        class="btn-lux hidden lg:inline-block text-[11px] uppercase tracking-[0.24em] text-carbon bg-sand px-6 py-3 hover:bg-gold hover:text-white nav-cta">Reservar
+        Escapada</a>
+      <button class="lg:hidden text-white p-2" id="mobile-menu-btn" aria-label="Abrir menú">
+        <iconify-icon icon="ph:list-light" width="26"></iconify-icon>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+      class="mobile-menu-hidden lg:hidden absolute top-full left-0 right-0 bg-carbon/97 backdrop-blur-xl border-t border-gold/20">
+      <nav class="px-6 py-6 flex flex-col gap-4 text-white/90 text-sm tracking-[0.18em] uppercase">
+        <a href="#amenidades" class="mobile-link flex items-center gap-3 py-2"><span
+            class="text-gold/70 text-xs">01</span> Amenidades</a>
+        <a href="#aposentos" class="mobile-link flex items-center gap-3 py-2"><span
+            class="text-gold/70 text-xs">02</span> Habitaciones</a>
+        <a href="#santuario" class="mobile-link flex items-center gap-3 py-2"><span
+            class="text-gold/70 text-xs">03</span> Animales</a>
+        <a href="#tarifas" class="mobile-link flex items-center gap-3 py-2"><span class="text-gold/70 text-xs">04</span>
+          Tarifas</a>
+        <a href="#ubicacion" class="mobile-link flex items-center gap-3 py-2"><span
+            class="text-gold/70 text-xs">05</span> Ubicación</a>
+        <a href="#reserva" class="mobile-link mt-3 bg-gold text-white px-5 py-3 text-center tracking-[0.22em]">Reservar
+          Escapada</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <div id="hero">
+      <!-- MOBILE HERO (Block on mobile, hidden on desktop. 100% original unmodified) -->
+      <section class="block md:hidden relative h-screen min-h-[650px] w-full overflow-hidden">
+        <picture class="absolute inset-0 w-full h-full object-cover">
+          <source srcset="IMG/hero-movil.webp" type="image/webp">
+          <img src="IMG/hero-movil.webp" alt="Cabaña La Martina" class="w-full h-full object-cover">
+        </picture>
+        <div class="absolute inset-0 hero-overlay"></div>
+
+        <div class="relative z-10 h-full max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col justify-center">
+          <div class="max-w-3xl">
+            <div class="reveal is-visible flex items-center gap-4 mb-8">
+              <span class="w-12 h-px bg-gold"></span>
+              <span class="eyebrow text-white/80">Tu escapada campestre ideal</span>
+            </div>
+            <h1
+              class="reveal is-visible reveal-delay-1 font-serif text-white text-[44px] sm:text-6xl lg:text-[80px] leading-[0.95] tracking-tight">
+              Tu escape natural<br />en <em class="italic text-gold">Sabanagrande</em>
+            </h1>
+            <p
+              class="reveal is-visible reveal-delay-2 mt-8 text-white/85 text-base lg:text-lg max-w-xl leading-relaxed font-light">
+              Disfruta de una cabaña totalmente privada en Sabanagrande, Atlántico. Alquila toda la propiedad en
+              exclusiva para tu familia o amigos: piscina, jacuzzi, amplios jardines y contacto directo con la
+              naturaleza. Sin áreas compartidas, solo diversión y descanso.
+            </p>
+            <div class="reveal is-visible reveal-delay-3 mt-10 flex flex-wrap gap-4">
+              <a href="#reserva" class="btn-lux btn-primary text-[11px] uppercase tracking-[0.24em] px-7 py-4">Reservar
+                Fechas</a>
+              <button onclick="loadTour360()"
+                class="btn-lux btn-ghost text-[11px] uppercase tracking-[0.24em] px-7 py-4 flex items-center gap-2.5">
+                <iconify-icon icon="ph:cube-transparent-light" width="16"></iconify-icon>
+                Tour Virtual 360°
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESKTOP HERO (Hidden on mobile, block on desktop. Optimized video background + delays) -->
+      <section class="hidden md:block relative h-screen min-h-[650px] w-full overflow-hidden">
+        <video id="hero-video" autoplay muted loop playsinline
+          class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+        </video>
+        <picture id="hero-picture" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
+          <source media="(min-width: 769px)" srcset="IMG/hero-web.webp" type="image/webp">
+          <img src="IMG/hero-web.webp" alt="Cabaña La Martina" class="w-full h-full object-cover">
+        </picture>
+        <div class="absolute inset-0 hero-overlay"></div>
+
+        <div class="relative z-10 h-full max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col justify-end pb-24 lg:pb-32">
+          <div class="max-w-3xl mx-auto text-center">
+            <div class="reveal is-visible hero-eyebrow flex items-center justify-center gap-4 mb-8">
+              <span class="w-12 h-px bg-gold"></span>
+              <span class="eyebrow text-white/80">Tu escapada campestre ideal</span>
+              <span class="w-12 h-px bg-gold"></span>
+            </div>
+            <h1
+              class="reveal is-visible hero-h1 font-serif text-white text-[44px] sm:text-6xl lg:text-[80px] leading-[0.95] tracking-tight">
+              Tu escape natural<br />en <em class="italic text-gold">Sabanagrande</em>
+            </h1>
+            <p
+              class="reveal is-visible hero-p mt-8 text-white/85 text-base lg:text-lg max-w-xl mx-auto leading-relaxed font-light">
+              Disfruta de una cabaña totalmente privada en Sabanagrande, Atlántico. Alquila toda la propiedad en
+              exclusiva para tu familia o amigos: piscina, jacuzzi, amplios jardines y contacto directo con la
+              naturaleza. Sin áreas compartidas, solo diversión y descanso.
+            </p>
+            <div class="reveal is-visible hero-btns mt-10 flex flex-wrap justify-center gap-4">
+              <a href="#reserva" class="btn-lux btn-primary text-[11px] uppercase tracking-[0.24em] px-7 py-4">Reservar
+                Fechas</a>
+              <button onclick="loadTour360()"
+                class="btn-lux btn-ghost text-[11px] uppercase tracking-[0.24em] px-7 py-4 flex items-center gap-2.5">
+                <iconify-icon icon="ph:cube-transparent-light" width="16"></iconify-icon>
+                Tour Virtual 360°
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-8 right-6 lg:right-12 z-10 flex flex-col items-center gap-3 text-white/60">
+          <span class="eyebrow text-[10px]">Descubrir</span>
+          <div class="w-px h-12 bg-white/40"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================== 02. FACADE & WELCOME ====================== -->
+    <section class="py-16 lg:py-24 bg-sand">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class="lg:col-span-7 reveal">
+            <div class="img-zoom relative aspect-[4/3] lg:aspect-auto lg:h-[620px]">
+              <img src="img/principal interior.jpg" alt="Fachada de Cabaña La Martina en Sabanagrande Atlántico"
+                loading="lazy" class="w-full h-full object-cover" />
+              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 bg-gradient-to-t from-carbon/85 to-transparent">
+                <p class="text-white/90 text-xs tracking-[0.3em] uppercase">Arquitectura campestre · Un espacio para
+                  compartir</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 reveal reveal-delay-1">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="w-10 h-px bg-olive"></span>
+              <span class="eyebrow text-olive">Bienvenida</span>
+            </div>
+            <h2 class="font-serif text-4xl lg:text-[52px] leading-[1.05] tracking-tight mb-8">
+              Privacidad total.<br /><em class="italic text-olive">Un solo grupo.</em>
+            </h2>
+            <p class="drop-cap text-carbon/80 leading-[1.85] text-[15px] mb-6">
+              En La Martina no hay áreas compartidas. Al reservar, la piscina, el jacuzzi, la cocina, las habitaciones y
+              los amplios jardines quedan exclusivamente para ti y los tuyos. Un lugar de descanso pensado para
+              disfrutar en familia o con amigos, donde la naturaleza y el confort se encuentran.
+            </p>
+            <p class="text-carbon/70 leading-[1.85] text-[15px] mb-10">
+              Diseñada para que desconectes y pases momentos inolvidables, con todas las comodidades modernas en medio
+              de un entorno natural y tranquilo.
+            </p>
+            <div class="grid grid-cols-3 gap-6 pt-8 border-t border-carbon/15">
+              <div>
+                <div class="font-serif text-3xl text-olive">100%</div>
+                <div class="eyebrow text-carbon/60 mt-2 text-[10px]">Privado</div>
+              </div>
+              <div>
+                <div class="font-serif text-3xl text-olive">9</div>
+                <div class="eyebrow text-carbon/60 mt-2 text-[10px]">Vehículos</div>
+              </div>
+              <div>
+                <div class="font-serif text-3xl text-olive">14</div>
+                <div class="eyebrow text-carbon/60 mt-2 text-[10px]">Huéspedes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 03. AMENITIES ====================== -->
+    <section id="amenidades" class="py-16 lg:py-24 bg-light">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <span class="w-10 h-px bg-olive"></span>
+            <span class="eyebrow text-olive">01 · Amenidades</span>
+            <span class="w-10 h-px bg-olive"></span>
+          </div>
+          <h2 class="font-serif text-4xl lg:text-[56px] leading-[1.05] tracking-tight">
+            Todo lo que necesitas para <em class="italic text-olive">un gran descanso</em>
+          </h2>
+          <p class="text-carbon/65 mt-6 leading-relaxed">Todas las comodidades están incluidas en una sola tarifa. Sin
+            recargos. Sin sorpresas.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Column A -->
+          <article class="lux-card reveal bg-sand border border-carbon/10 overflow-hidden">
+            <div class="img-zoom h-64 overflow-hidden">
+              <img src="IMG/hidromasaje.png" alt="Piscina y jacuzzi privado en Cabaña La Martina" loading="lazy"
+                class="w-full h-full object-cover" />
+            </div>
+            <div class="p-8 lg:p-9">
+              <div class="flex items-baseline justify-between mb-6">
+                <span class="eyebrow text-gold">Área Húmeda</span>
+              </div>
+              <h3 class="font-serif text-[26px] leading-tight mb-5">Exterior & Hidromasaje</h3>
+              <ul class="space-y-3 text-sm text-carbon/75 leading-relaxed">
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Piscina privada <strong>12m × 4m ×
+                      1.5m</strong> de profundidad</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Jacuzzi de hidromasaje integrado</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Campo de fútbol privado en césped
+                    natural</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Kiosco tradicional de techo alto</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Column B -->
+          <article class="lux-card reveal reveal-delay-1 bg-sand border border-carbon/10 overflow-hidden">
+            <div class="img-zoom h-64 overflow-hidden">
+              <img src="IMG/cocina.jpg" alt="Cocina equipada en Cabaña La Martina" loading="lazy"
+                class="w-full h-full object-cover" />
+            </div>
+            <div class="p-8 lg:p-9">
+              <div class="flex items-baseline justify-between mb-6">
+                <span class="eyebrow text-gold">Confort Interior</span>
+              </div>
+              <h3 class="font-serif text-[26px] leading-tight mb-5">Cocina & Climática</h3>
+              <ul class="space-y-3 text-sm text-carbon/75 leading-relaxed">
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Interiores totalmente <strong>aire
+                      acondicionado</strong></span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Cocina completamente equipada</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Smart TVs en cada habitación</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>WiFi de alta velocidad</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Column C -->
+          <article class="lux-card reveal reveal-delay-2 bg-sand border border-carbon/10 overflow-hidden">
+            <div class="img-zoom h-64 overflow-hidden">
+              <img src="IMG/sendero%20animales.png" alt="Senderos y animales en Cabaña La Martina" loading="lazy"
+                class="w-full h-full object-cover" />
+            </div>
+            <div class="p-8 lg:p-9">
+              <div class="flex items-baseline justify-between mb-6">
+                <span class="eyebrow text-gold">Entorno Verde</span>
+              </div>
+              <h3 class="font-serif text-[26px] leading-tight mb-5">Senderos & Pet Friendly</h3>
+              <ul class="space-y-3 text-sm text-carbon/75 leading-relaxed">
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span><strong>Zonas pet-friendly</strong> para que
+                    tus mascotas disfruten del campo en libertad</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Senderos ecológicos privados rodeados de
+                    árboles frutales</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span><strong>Interacción respetuosa</strong> con
+                    nuestras avestruces y llamas</span></li>
+                <li class="flex gap-3"><iconify-icon icon="ph:check-light" width="16"
+                    class="text-olive mt-1 shrink-0"></iconify-icon><span>Amplias áreas verdes exclusivas para la
+                    recreación de tu grupo</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 04. ROOMS & SUITES ====================== -->
+    <section id="aposentos" class="py-16 lg:py-24 bg-carbon text-sand">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5 reveal">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="w-10 h-px bg-gold"></span>
+              <span class="eyebrow text-gold">02 · Habitaciones</span>
+            </div>
+            <h2 class="font-serif text-4xl lg:text-[56px] leading-[1.05] tracking-tight mb-8">
+              Habitaciones cómodas<br />para <em class="italic text-gold">todo el grupo</em>
+            </h2>
+            <p class="text-sand/70 leading-relaxed mb-10 text-[15px]">
+              Tres espacios aireados y frescos con aire acondicionado, baño privado y televisión. Capacidad para
+              albergar hasta catorce huéspedes en total comodidad.
+            </p>
+
+            <div class="flex flex-col gap-3">
+              <button class="room-tab active text-left px-6 py-5 border border-sand/15 flex items-center gap-5"
+                data-room="1">
+                <span class="tab-num font-serif text-2xl text-sand/40">01</span>
+                <div class="flex-1">
+                  <div class="font-serif text-lg">Habitación Familiar 01</div>
+                  <div class="text-[11px] tracking-[0.2em] uppercase text-sand/50 mt-1">2 camas litera · 4 huéspedes
+                  </div>
+                </div>
+                <iconify-icon icon="ph:arrow-right-light" width="18"></iconify-icon>
+              </button>
+              <button class="room-tab text-left px-6 py-5 border border-sand/15 flex items-center gap-5" data-room="2">
+                <span class="tab-num font-serif text-2xl text-sand/40">02</span>
+                <div class="flex-1">
+                  <div class="font-serif text-lg">Habitación Familiar 02</div>
+                  <div class="text-[11px] tracking-[0.2em] uppercase text-sand/50 mt-1">2 camas litera · 4 huéspedes
+                  </div>
+                </div>
+                <iconify-icon icon="ph:arrow-right-light" width="18"></iconify-icon>
+              </button>
+              <button class="room-tab text-left px-6 py-5 border border-sand/15 flex items-center gap-5" data-room="3">
+                <span class="tab-num font-serif text-2xl text-sand/40">03</span>
+                <div class="flex-1">
+                  <div class="font-serif text-lg">Habitación Matrimonial 03</div>
+                  <div class="text-[11px] tracking-[0.2em] uppercase text-sand/50 mt-1">Cama principal · 2 a 6 huéspedes
+                  </div>
+                </div>
+                <iconify-icon icon="ph:arrow-right-light" width="18"></iconify-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 reveal reveal-delay-1">
+            <!-- Parent Container: desktop has img-zoom, overflow-hidden, and h-[680px]. Mobile has flex-col. -->
+            <div class="img-zoom relative flex flex-col lg:block lg:overflow-hidden lg:h-[680px]">
+              <!-- Image Wrapper: mobile has aspect-[4/3], desktop has absolute inset-0 -->
+              <div
+                class="relative w-full aspect-[4/3] lg:absolute lg:inset-0 lg:h-full lg:w-full lg:aspect-auto overflow-hidden">
+                <img id="room-image" src="IMG/h1.jpg" alt="Habitación familiar en Cabaña La Martina Sabanagrande"
+                  loading="lazy" class="w-full h-full object-cover transition-opacity duration-700" />
+              </div>
+              <!-- Gradient Overlay (Only visible on desktop) -->
+              <div
+                class="hidden lg:block absolute inset-0 bg-gradient-to-t from-carbon/70 via-transparent to-transparent pointer-events-none">
+              </div>
+              <!-- Text Wrapper: mobile has relative bg-surface p-6, desktop has absolute bottom-0 left-0 right-0 p-8 lg:p-10 lg:bg-transparent -->
+              <div
+                class="relative lg:absolute lg:bottom-0 lg:left-0 lg:right-0 p-6 sm:p-8 lg:p-10 bg-surface lg:bg-transparent">
+                <!-- Flex container: mobile has flex-col, desktop has row-based gap-6 -->
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                  <div>
+                    <div class="eyebrow text-gold mb-3" id="room-eyebrow">Habitación 01 · Familiar</div>
+                    <h3 class="font-serif text-2xl lg:text-4xl text-sand" id="room-title">Habitación Familiar 01</h3>
+                  </div>
+                  <!-- Amenities container: mobile has flex-wrap gap-x-6 gap-y-2, desktop has gap-6 -->
+                  <div class="flex flex-wrap lg:flex-nowrap gap-x-6 gap-y-2 lg:gap-6 text-sand/85 text-sm">
+                    <div class="flex items-center gap-2"><iconify-icon icon="ph:wind-light" width="18"
+                        class="text-gold"></iconify-icon> A/C</div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="ph:bathtub-light" width="18"
+                        class="text-gold"></iconify-icon> Baño privado</div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="ph:television-light" width="18"
+                        class="text-gold"></iconify-icon> TV</div>
+                  </div>
+                </div>
+                <p class="text-sand/70 mt-4 lg:mt-5 max-w-lg text-[14px] leading-relaxed" id="room-desc">Dos camas
+                  litera
+                  cómodas, capacidad para cuatro huéspedes. Aire acondicionado, baño privado y televisión. Ropa de cama
+                  suave y limpia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 05. WILDLIFE SANCTUARY ====================== -->
+    <section id="santuario" class="py-16 lg:py-24 bg-sand">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-12">
+          <div class="lg:col-span-7 reveal">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="w-10 h-px bg-olive"></span>
+              <span class="eyebrow text-olive">03 · Nuestros Animales</span>
+            </div>
+            <h2 class="font-serif text-4xl lg:text-[56px] leading-[1.05] tracking-tight">
+              Nuestros animales<br /><em class="italic text-olive">campestres</em>
+            </h2>
+          </div>
+          <div class="lg:col-span-5 reveal reveal-delay-1 flex items-end">
+            <p class="text-carbon/70 leading-relaxed text-[15px]">
+              En La Martina convives pacíficamente con animales hermosos que deambulan libremente por los jardines. Es
+              una experiencia única para disfrutar en familia y conectarse con la naturaleza en un entorno de respeto y
+              armonía.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ecological rule card -->
+        <div class="bg-olive text-sand p-8 lg:p-10 mb-12 reveal grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-1 flex md:justify-center">
+            <iconify-icon icon="ph:leaf-light" width="48" class="text-gold"></iconify-icon>
+          </div>
+          <div class="md:col-span-7">
+            <div class="eyebrow text-gold mb-3">Cuidado Animal</div>
+            <h3 class="font-serif text-2xl lg:text-3xl mb-3">Sin alimento externo permitido</h3>
+            <p class="text-sand/80 text-sm leading-relaxed">Para cuidar a nuestros animales, los visitantes solo pueden
+              alimentarlos utilizando kits de alimento balanceado que se adquieren dentro de la cabaña. Cualquier otra
+              comida está estrictamente prohibida por su salud y bienestar.</p>
+          </div>
+          <div class="md:col-span-4 md:border-l md:border-sand/20 md:pl-8">
+            <div class="eyebrow text-gold mb-3">Alimentación permitida</div>
+            <ul class="space-y-2 text-sm text-sand/90">
+              <li class="flex items-center gap-2"><iconify-icon icon="ph:check-circle-light" width="16"
+                  class="text-gold"></iconify-icon> Llamas</li>
+              <li class="flex items-center gap-2"><iconify-icon icon="ph:check-circle-light" width="16"
+                  class="text-gold"></iconify-icon> Avestruces</li>
+              <li class="flex items-center gap-2"><iconify-icon icon="ph:check-circle-light" width="16"
+                  class="text-gold"></iconify-icon> Guacamayas</li>
+            </ul>
+            <p class="text-[11px] text-sand/60 mt-4 leading-relaxed">El resto de las especies son exclusivamente para
+              contemplación visual.</p>
+          </div>
+        </div>
+
+        <!-- Horizontal scroll -->
+        <div class="reveal reveal-delay-1">
+          <div class="flex items-center justify-between mb-6">
+            <p class="eyebrow text-carbon/60">Especies que conocerás · Deslice horizontalmente</p>
+            <div class="flex gap-3">
+              <button onclick="scrollWildlife(-1)"
+                class="w-10 h-10 border border-carbon/20 flex items-center justify-center hover:bg-carbon hover:text-sand transition"><iconify-icon
+                  icon="ph:arrow-left-light" width="18"></iconify-icon></button>
+              <button onclick="scrollWildlife(1)"
+                class="w-10 h-10 border border-carbon/20 flex items-center justify-center hover:bg-carbon hover:text-sand transition"><iconify-icon
+                  icon="ph:arrow-right-light" width="18"></iconify-icon></button>
+            </div>
+          </div>
+          <div id="wildlife-scroll" class="flex gap-5 overflow-x-auto no-scrollbar pb-4 -mx-6 px-6 lg:mx-0 lg:px-0">
+            <!-- Wildlife cards generated below -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 06. PRICING ====================== -->
+    <section id="tarifas" class="py-16 lg:py-24 bg-light">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <span class="w-10 h-px bg-olive"></span>
+            <span class="eyebrow text-olive">04 · Tarifas</span>
+            <span class="w-10 h-px bg-olive"></span>
+          </div>
+          <h2 class="font-serif text-4xl lg:text-[56px] leading-[1.05] tracking-tight">
+            Tarifa única. <em class="italic text-olive">Sin estacionalidad.</em>
+          </h2>
+          <p class="text-carbon/65 mt-6 leading-relaxed">Dos modalidades de alquiler para tu familia o grupo de amigos.
+            Un solo precio plano, sin recargos por fin de semana o festivos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+          <!-- Card A: Day Pass -->
+          <article class="lux-card reveal bg-sand border border-carbon/10 p-8 lg:p-10 relative">
+            <div class="absolute top-6 right-6 eyebrow text-gold">Modalidad A</div>
+            <div class="eyebrow text-olive mb-4">Pasadía Diurno</div>
+            <h3 class="font-serif text-3xl lg:text-4xl mb-6">Day Pass</h3>
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="font-serif text-5xl lg:text-6xl text-carbon num-display">$1.200.000</span>
+              <span class="text-carbon/60 text-sm">COP</span>
+            </div>
+            <p class="text-[12px] text-carbon/55 mb-8">Tarifa plana · 1 a 20 huéspedes</p>
+
+            <div class="divider-line my-7"></div>
+
+            <ul class="space-y-3 text-sm text-carbon/80 mb-8">
+              <li class="flex gap-3"><iconify-icon icon="ph:clock-light" width="18"
+                  class="text-olive mt-0.5"></iconify-icon><span>Horario: <strong>9:00 AM — 5:00 PM</strong></span></li>
+              <li class="flex gap-3"><iconify-icon icon="ph:users-three-light" width="18"
+                  class="text-olive mt-0.5"></iconify-icon><span>Capacidad máxima: <strong>20 huéspedes</strong></span>
+              </li>
+              <li class="flex gap-3"><iconify-icon icon="ph:swimming-pool-light" width="18"
+                  class="text-olive mt-0.5"></iconify-icon><span>Acceso exclusivo a piscina y áreas verdes</span></li>
+              <li class="flex gap-3"><iconify-icon icon="ph:hand-coins-light" width="18"
+                  class="text-olive mt-0.5"></iconify-icon><span>Depósito de reserva: <strong>$360.000 COP</strong>
+                  (30%)</span></li>
+            </ul>
+
+            <a href="#reserva"
+              class="btn-lux block text-center text-[11px] uppercase tracking-[0.24em] px-7 py-4 border border-carbon hover:bg-carbon hover:text-sand">Reservar
+              Pasadía</a>
+          </article>
+
+          <!-- Card B: Overnight -->
+          <article
+            class="lux-card reveal reveal-delay-1 bg-carbon text-sand border border-gold/30 p-8 lg:p-10 relative">
+            <div class="absolute top-6 right-6 eyebrow text-gold">Modalidad B</div>
+            <div class="eyebrow text-gold mb-4">Alojamiento Completo</div>
+            <h3 class="font-serif text-3xl lg:text-4xl mb-6">Overnight Stay</h3>
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="font-serif text-5xl lg:text-6xl text-sand num-display">$3.000.000</span>
+              <span class="text-sand/60 text-sm">COP / noche</span>
+            </div>
+            <p class="text-[12px] text-sand/55 mb-8">Tarifa invariable · Fines de semana, festivos o entre semana</p>
+
+            <div class="divider-line my-7 opacity-30"></div>
+
+            <ul class="space-y-3 text-sm text-sand/80 mb-8">
+              <li class="flex gap-3"><iconify-icon icon="ph:moon-stars-light" width="18"
+                  class="text-gold mt-0.5"></iconify-icon><span>Uso total exclusivo de la cabaña</span></li>
+              <li class="flex gap-3"><iconify-icon icon="ph:bed-light" width="18"
+                  class="text-gold mt-0.5"></iconify-icon><span>3 habitaciones cómodas con aire acondicionado</span>
+              </li>
+              <li class="flex gap-3"><iconify-icon icon="ph:users-three-light" width="18"
+                  class="text-gold mt-0.5"></iconify-icon><span>Capacidad máxima: <strong>14 huéspedes</strong></span>
+              </li>
+              <li class="flex gap-3"><iconify-icon icon="ph:hand-coins-light" width="18"
+                  class="text-gold mt-0.5"></iconify-icon><span>Depósito de reserva: <strong>$1.000.000
+                    COP</strong></span></li>
+            </ul>
+
+            <a href="#reserva"
+              class="btn-lux block text-center text-[11px] uppercase tracking-[0.24em] px-7 py-4 bg-gold text-carbon hover:bg-sand">Reservar
+              Alojamiento</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 07. RULES ====================== -->
+    <section class="py-16 lg:py-24 bg-sand">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <span class="w-10 h-px bg-olive"></span>
+            <span class="eyebrow text-olive">05 · Normas</span>
+            <span class="w-10 h-px bg-olive"></span>
+          </div>
+          <h2 class="font-serif text-4xl lg:text-[52px] leading-[1.05] tracking-tight">
+            Normas de la cabaña para<br /><em class="italic text-olive">una gran estadía</em>
+          </h2>
+          <p class="text-carbon/65 mt-6 leading-relaxed">Medidas para garantizar el orden familiar, el descanso y el
+            bienestar de nuestros animales.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <article class="reveal border-t border-carbon/20 pt-8">
+            <iconify-icon icon="ph:speaker-slash-light" width="40" class="text-olive mb-5"></iconify-icon>
+            <div class="eyebrow text-gold mb-3">Buen Ambiente Sonoro</div>
+            <h3 class="font-serif text-2xl mb-4">Cero bafles externos</h3>
+            <p class="text-carbon/70 text-sm leading-relaxed">Para mantener el orden familiar, ingresar con bafles de
+              fiesta o amplificadores está prohibido. Los huéspedes deben utilizar el sistema de sonido integrado de la
+              cabaña.</p>
+          </article>
+          <article class="reveal reveal-delay-1 border-t border-carbon/20 pt-8">
+            <iconify-icon icon="ph:cigarette-slash-light" width="40" class="text-olive mb-5"></iconify-icon>
+            <div class="eyebrow text-gold mb-3">Espacios Libres de Humo</div>
+            <h3 class="font-serif text-2xl mb-4">100% sin humo</h3>
+            <p class="text-carbon/70 text-sm leading-relaxed">No se permite fumar — incluidos cigarrillos electrónicos y
+              vapeadores — dentro de la cabaña ni en el área del Kiosco techado. Cuidamos el aire de todos.</p>
+          </article>
+          <article class="reveal reveal-delay-2 border-t border-carbon/20 pt-8">
+            <iconify-icon icon="ph:shield-check-light" width="40" class="text-olive mb-5"></iconify-icon>
+            <div class="eyebrow text-gold mb-3">Cuidado del Espacio</div>
+            <h3 class="font-serif text-2xl mb-4">Depósito de daños</h3>
+            <p class="text-carbon/70 text-sm leading-relaxed">Un depósito de seguridad reembolsable de <strong>$300.000
+                COP</strong> se requiere antes del check-in. Es devuelto íntegramente tras la verificación de la cabaña
+              al momento del check-out.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 08. 360 TOUR ====================== -->
+    <section id="tour-360" class="py-16 lg:py-24 bg-carbon text-sand">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class="lg:col-span-4 reveal">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="w-10 h-px bg-gold"></span>
+              <span class="eyebrow text-gold">06 · Tour Virtual</span>
+            </div>
+            <h2 class="font-serif text-4xl lg:text-[52px] leading-[1.05] tracking-tight mb-7">
+              Tour 360°<br /><em class="italic text-gold">desde tu pantalla</em>
+            </h2>
+            <p class="text-sand/70 leading-relaxed mb-8 text-[15px]">
+              Recorre cada rincón de nuestra cabaña antes de venir. Explora las habitaciones, el área social y los
+              jardines para que planees tu escapada perfecta.
+            </p>
+            <p class="text-sand/60 text-[13px] leading-relaxed italic border-l border-gold/40 pl-5 mb-8">
+              "Mantenga presionado y deslice para girar. Para una experiencia inmersiva por giroscopio en alta
+              definición, contacte a su Concierge."
+            </p>
+            <button onclick="loadTour360()"
+              class="btn-lux inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] px-7 py-4 bg-gold text-carbon hover:bg-sand">
+              <iconify-icon icon="ph:cube-transparent-light" width="16"></iconify-icon>
+              Abrir Vista Inmersiva
+            </button>
+          </div>
+          <div class="lg:col-span-8 reveal reveal-delay-1">
+            <div id="tour-360-container"
+              class="tour-360-ratio relative w-full border border-gold/20 overflow-hidden group">
+              <!-- Preloaded Tour 360 iframe -->
+              <iframe id="tour-iframe" src="https://tour.panoee.net/6a29ad979c1006a5f0a9e0ea"
+                class="w-full h-full border-0" allowfullscreen allow="gyroscope; accelerometer" loading="lazy"></iframe>
+
+              <!-- Cover Overlay and Image (Hidden when active) -->
+              <div id="tour-cover" onclick="loadTour360()"
+                class="absolute inset-0 cursor-pointer transition-opacity duration-700">
+                <picture class="absolute inset-0 w-full h-full object-cover">
+                  <source media="(max-width: 768px)" srcset="IMG/fondo-celular.webp" type="image/webp">
+                  <source media="(min-width: 769px)" srcset="IMG/fondo-web.webp" type="image/webp">
+                  <img src="IMG/fondo-web.webp" alt="Tour Virtual 360 Cabaña La Martina"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 09. BOOKING WIDGET ====================== -->
+    <section id="reserva" class="py-16 lg:py-24 bg-sand">
+      <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <span class="w-10 h-px bg-olive"></span>
+            <span class="eyebrow text-olive">07 · Reserva Directa</span>
+            <span class="w-10 h-px bg-olive"></span>
+          </div>
+          <h2 class="font-serif text-4xl lg:text-[56px] leading-[1.05] tracking-tight">
+            Reserva tu <em class="italic text-olive">escapada privada</em>
+          </h2>
+          <p class="text-carbon/65 mt-6 leading-relaxed">Un proceso sencillo en pocos pasos. Sin costos ocultos.</p>
+        </div>
+
+        <div class="bg-white/40 border border-carbon/10 p-6 lg:p-12 reveal reveal-delay-1">
+
+          <!-- Step indicator -->
+          <div class="flex items-center justify-between mb-12 max-w-2xl mx-auto">
+            <div class="flex flex-col items-center gap-2 step-item" data-step="1">
+              <div
+                class="step-dot active w-10 h-10 rounded-full border border-carbon/30 flex items-center justify-center text-sm font-medium">
+                1</div>
+              <span class="eyebrow text-[9px] text-carbon/60 text-center">Plan</span>
+            </div>
+            <div class="flex-1 h-px bg-carbon/15 mx-2"></div>
+            <div class="flex flex-col items-center gap-2 step-item" data-step="2">
+              <div
+                class="step-dot w-10 h-10 rounded-full border border-carbon/30 flex items-center justify-center text-sm font-medium">
+                2</div>
+              <span class="eyebrow text-[9px] text-carbon/60 text-center">Huéspedes</span>
+            </div>
+            <div class="flex-1 h-px bg-carbon/15 mx-2"></div>
+            <div class="flex flex-col items-center gap-2 step-item" data-step="3">
+              <div
+                class="step-dot w-10 h-10 rounded-full border border-carbon/30 flex items-center justify-center text-sm font-medium">
+                3</div>
+              <span class="eyebrow text-[9px] text-carbon/60 text-center">Fechas</span>
+            </div>
+            <div class="flex-1 h-px bg-carbon/15 mx-2"></div>
+            <div class="flex flex-col items-center gap-2 step-item" data-step="4">
+              <div
+                class="step-dot w-10 h-10 rounded-full border border-carbon/30 flex items-center justify-center text-sm font-medium">
+                4</div>
+              <span class="eyebrow text-[9px] text-carbon/60 text-center">Verificar</span>
+            </div>
+          </div>
+
+          <!-- STEP 1: Plan -->
+          <div class="step-panel active" data-panel="1">
+            <h3 class="font-serif text-3xl mb-2 text-center">Selecciona tu modalidad</h3>
+            <p class="text-carbon/60 text-center text-sm mb-10">Dos experiencias para disfrutar. Una sola tarifa plana.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
+              <div class="plan-card border border-carbon/20 p-7" data-plan="daypass" onclick="selectPlan('daypass')">
+                <div class="flex items-start justify-between mb-6">
+                  <div>
+                    <div class="eyebrow text-gold mb-2">Pasadía Diurno</div>
+                    <h4 class="font-serif text-2xl">Day Pass</h4>
+                  </div>
+                  <div class="plan-radio"></div>
+                </div>
+                <div class="font-serif text-3xl text-olive mb-1 num-display">$1.200.000</div>
+                <div class="text-[12px] text-carbon/55 mb-5">COP · Tarifa plana</div>
+                <ul class="space-y-2 text-sm text-carbon/70">
+                  <li class="flex gap-2"><iconify-icon icon="ph:clock-light" width="15"
+                      class="text-olive mt-0.5"></iconify-icon> 9:00 AM — 5:00 PM</li>
+                  <li class="flex gap-2"><iconify-icon icon="ph:users-three-light" width="15"
+                      class="text-olive mt-0.5"></iconify-icon> Hasta 20 huéspedes</li>
+                  <li class="flex gap-2"><iconify-icon icon="ph:hand-coins-light" width="15"
+                      class="text-olive mt-0.5"></iconify-icon> Depósito: $360.000 COP</li>
+                </ul>
+              </div>
+              <div class="plan-card border border-carbon/20 p-7" data-plan="overnight"
+                onclick="selectPlan('overnight')">
+                <div class="flex items-start justify-between mb-6">
+                  <div>
+                    <div class="eyebrow text-gold mb-2">Alojamiento</div>
+                    <h4 class="font-serif text-2xl">Overnight</h4>
+                  </div>
+                  <div class="plan-radio"></div>
+                </div>
+                <div class="font-serif text-3xl text-olive mb-1 num-display">$3.000.000</div>
+                <div class="text-[12px] text-carbon/55 mb-5">COP / noche · Tarifa invariable</div>
+                <ul class="space-y-2 text-sm text-carbon/70">
+                  <li class="flex gap-2"><iconify-icon icon="ph:moon-stars-light" width="15"
+                      class="text-olive mt-0.5"></iconify-icon> Estancia nocturna completa</li>
+                  <li class="flex gap-2"><iconify-icon icon="ph:users-three-light" width="15"
+                      class="text-olive mt-0.5"></iconify-icon> Hasta 14 huéspedes</li>
+                  <li class="flex gap-2"><iconify-icon icon="ph:hand-coins-light" width="15"
+                      class="text-olive mt-0.5"></iconify-icon> Depósito: $1.000.000 COP</li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex justify-end mt-10 max-w-3xl mx-auto">
+              <button onclick="nextStep()"
+                class="btn-lux btn-primary text-[11px] uppercase tracking-[0.24em] px-8 py-4 flex items-center gap-2">Continuar
+                <iconify-icon icon="ph:arrow-right-light" width="16"></iconify-icon></button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Guests & Details -->
+          <div class="step-panel" data-panel="2">
+            <h3 class="font-serif text-3xl mb-2 text-center">Huésped titular</h3>
+            <p class="text-carbon/60 text-center text-sm mb-10">Información de contacto para coordinar tu llegada.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-2xl mx-auto">
+              <div>
+                <label class="eyebrow text-carbon/60 mb-3 block">Nombre completo</label>
+                <input type="text" id="guest-name" class="lux-input" placeholder="Tu nombre" />
+              </div>
+              <div>
+                <label class="eyebrow text-carbon/60 mb-3 block">Teléfono / WhatsApp (Opcional)</label>
+                <input type="tel" id="guest-phone" class="lux-input" placeholder="+57 300 000 0000" />
+              </div>
+            </div>
+
+            <div class="max-w-2xl mx-auto mt-10">
+              <div class="flex items-center justify-between mb-4">
+                <label class="eyebrow text-carbon/60">Número de huéspedes</label>
+                <span id="guest-capacity-info" class="text-[12px] text-carbon/55"></span>
+              </div>
+              <div class="flex items-center gap-5">
+                <button onclick="adjustGuests(-1)"
+                  class="counter-btn w-11 h-11 border border-carbon/30 flex items-center justify-center text-xl">−</button>
+                <input type="number" id="guest-count" value="8" min="1"
+                  class="lux-input text-center font-serif text-2xl" readonly />
+                <button onclick="adjustGuests(1)"
+                  class="counter-btn w-11 h-11 border border-carbon/30 flex items-center justify-center text-xl">+</button>
+                <div class="ml-3 text-[12px] text-carbon/60 leading-snug">
+                  <div id="capacity-helper">Selecciona primero una modalidad</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-12 max-w-2xl mx-auto">
+              <button onclick="prevStep()"
+                class="btn-lux text-[11px] uppercase tracking-[0.24em] px-7 py-4 border border-carbon/30 hover:bg-carbon hover:text-sand flex items-center gap-2"><iconify-icon
+                  icon="ph:arrow-left-light" width="16"></iconify-icon> Atrás</button>
+              <button onclick="nextStep()"
+                class="btn-lux btn-primary text-[11px] uppercase tracking-[0.24em] px-8 py-4 flex items-center gap-2">Continuar
+                <iconify-icon icon="ph:arrow-right-light" width="16"></iconify-icon></button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Calendar -->
+          <div class="step-panel" data-panel="3">
+            <h3 class="font-serif text-3xl mb-2 text-center" id="cal-title">Selecciona tu fecha</h3>
+            <p class="text-carbon/60 text-center text-sm mb-10" id="cal-subtitle">Elige una fecha para tu pasadía
+              diurna.</p>
+            <div class="max-w-md mx-auto">
+              <div class="flex items-center justify-between mb-6">
+                <button onclick="changeMonth(-1)"
+                  class="w-10 h-10 border border-carbon/30 flex items-center justify-center hover:bg-carbon hover:text-sand"><iconify-icon
+                    icon="ph:caret-left-light" width="18"></iconify-icon></button>
+                <div class="font-serif text-xl" id="cal-month-label"></div>
+                <button onclick="changeMonth(1)"
+                  class="w-10 h-10 border border-carbon/30 flex items-center justify-center hover:bg-carbon hover:text-sand"><iconify-icon
+                    icon="ph:caret-right-light" width="18"></iconify-icon></button>
+              </div>
+              <div
+                class="grid grid-cols-7 gap-1 text-center text-[11px] tracking-[0.15em] uppercase text-carbon/50 mb-2">
+                <div>Do</div>
+                <div>Lu</div>
+                <div>Ma</div>
+                <div>Mi</div>
+                <div>Ju</div>
+                <div>Vi</div>
+                <div>Sá</div>
+              </div>
+              <div id="cal-grid" class="grid grid-cols-7 gap-1 text-sm"></div>
+
+              <div id="date-readout" class="mt-7 text-center text-sm text-carbon/70 hidden">
+                <div class="divider-line mb-5"></div>
+                <div id="checkin-readout"></div>
+                <div id="checkout-readout" class="mt-1"></div>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-12 max-w-2xl mx-auto">
+              <button onclick="prevStep()"
+                class="btn-lux text-[11px] uppercase tracking-[0.24em] px-7 py-4 border border-carbon/30 hover:bg-carbon hover:text-sand flex items-center gap-2"><iconify-icon
+                  icon="ph:arrow-left-light" width="16"></iconify-icon> Atrás</button>
+              <button onclick="nextStep()"
+                class="btn-lux btn-primary text-[11px] uppercase tracking-[0.24em] px-8 py-4 flex items-center gap-2">Ver
+                Resumen <iconify-icon icon="ph:arrow-right-light" width="16"></iconify-icon></button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Summary -->
+          <div class="step-panel" data-panel="4">
+            <h3 class="font-serif text-3xl mb-2 text-center">Verificación de reserva</h3>
+            <p class="text-carbon/60 text-center text-sm mb-10">Confirma los detalles antes de enviar tu solicitud.</p>
+
+            <div class="max-w-2xl mx-auto bg-white/60 border border-carbon/10 p-8 lg:p-10">
+              <div class="flex items-center justify-between pb-5 mb-5 border-b border-carbon/15">
+                <div>
+                  <div class="eyebrow text-gold mb-1">Resumen</div>
+                  <div class="font-serif text-xl">Cabaña La Martina</div>
+                </div>
+                <iconify-icon icon="ph:seal-check-light" width="40" class="text-olive"></iconify-icon>
+              </div>
+
+              <div class="space-y-4 text-sm">
+                <div class="flex justify-between py-3 border-b border-carbon/10">
+                  <span class="text-carbon/60 eyebrow text-[11px]">Modalidad</span>
+                  <span id="sum-plan" class="font-medium"></span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-carbon/10">
+                  <span class="text-carbon/60 eyebrow text-[11px]">Huésped</span>
+                  <span id="sum-name" class="font-medium"></span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-carbon/10">
+                  <span class="text-carbon/60 eyebrow text-[11px]">Teléfono</span>
+                  <span id="sum-phone" class="font-medium"></span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-carbon/10">
+                  <span class="text-carbon/60 eyebrow text-[11px]" id="sum-date-label">Fecha</span>
+                  <span id="sum-date" class="font-medium"></span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-carbon/10">
+                  <span class="text-carbon/60 eyebrow text-[11px]">Huéspedes</span>
+                  <span id="sum-guests" class="font-medium"></span>
+                </div>
+                <div class="flex justify-between py-3 border-b border-carbon/10">
+                  <span class="text-carbon/60 eyebrow text-[11px]">Tarifa plana</span>
+                  <span id="sum-price" class="font-serif text-xl text-olive num-display"></span>
+                </div>
+              </div>
+
+              <div class="mt-6 p-5 bg-olive/8 border-l-2 border-olive">
+                <div class="eyebrow text-olive mb-2">Compromiso de pago</div>
+                <p class="text-[13px] text-carbon/80 leading-relaxed">
+                  Requiere un depósito de <strong id="sum-deposit" class="text-olive"></strong> para confirmar la
+                  reserva, más un depósito de daños reembolsable de <strong class="text-olive">$300.000 COP</strong> al
+                  momento del check-in.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-10 max-w-2xl mx-auto">
+              <button onclick="prevStep()"
+                class="btn-lux text-[11px] uppercase tracking-[0.24em] px-7 py-4 border border-carbon/30 hover:bg-carbon hover:text-sand flex items-center gap-2"><iconify-icon
+                  icon="ph:arrow-left-light" width="16"></iconify-icon> Atrás</button>
+              <button onclick="submitReservation()"
+                class="btn-lux text-[11px] uppercase tracking-[0.24em] px-8 py-4 bg-[#25D366] text-white hover:bg-[#1da851] flex items-center gap-2">
+                <iconify-icon icon="ph:whatsapp-logo-light" width="18"></iconify-icon>
+                Enviar Solicitud
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 10. LOCATION ====================== -->
+    <section id="ubicacion" class="py-16 lg:py-24 bg-light">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class="lg:col-span-5 reveal">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="w-10 h-px bg-olive"></span>
+              <span class="eyebrow text-olive">08 · Ubicación</span>
+            </div>
+            <h2 class="font-serif text-4xl lg:text-[52px] leading-[1.05] tracking-tight mb-8">
+              Vía Oriental.<br /><em class="italic text-olive">Treinta minutos</em> de Barranquilla.
+            </h2>
+            <p class="text-carbon/75 leading-relaxed mb-6 text-[15px]">
+              Ubicada en Sabanagrande, Atlántico. Fácil acceso por carreteras pavimentadas, transitables para todo tipo
+              de vehículo. Llega rápido y sin complicaciones.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex gap-4 items-start">
+                <iconify-icon icon="ph:map-pin-light" width="22" class="text-olive mt-0.5"></iconify-icon>
+                <div>
+                  <div class="eyebrow text-carbon/60 mb-1">Dirección</div>
+                  <div class="text-sm">Vía Oriental, Sabanagrande, Atlántico — Colombia</div>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <iconify-icon icon="ph:car-light" width="22" class="text-olive mt-0.5"></iconify-icon>
+                <div>
+                  <div class="eyebrow text-carbon/60 mb-1">Acceso</div>
+                  <div class="text-sm">30 min desde Barranquilla · Carretera pavimentada en óptimas condiciones</div>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <iconify-icon icon="ph:parking-light" width="22" class="text-olive mt-0.5"></iconify-icon>
+                <div>
+                  <div class="eyebrow text-carbon/60 mb-1">Parqueadero</div>
+                  <div class="text-sm">Parqueadero privado seguro para 9 vehículos</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4 mt-8">
+              <a href="https://waze.com/ul?ll=10.803088676478307,-74.7845402753069&navigate=yes" target="_blank"
+                rel="noopener noreferrer"
+                class="btn-lux btn-primary text-[11px] uppercase tracking-[0.24em] px-6 py-3.5 flex items-center gap-2">
+                <iconify-icon icon="fa6-brands:waze" width="16"></iconify-icon>
+                Abrir en Waze
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=10.803088676478307,-74.7845402753069"
+                target="_blank" rel="noopener noreferrer"
+                class="btn-lux btn-ghost text-[11px] uppercase tracking-[0.24em] px-6 py-3.5 flex items-center gap-2 border border-carbon/30 !text-carbon hover:!bg-carbon hover:!text-sand">
+                <iconify-icon icon="ph:google-logo-light" width="16"></iconify-icon>
+                Google Maps
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-7 reveal reveal-delay-1">
+            <div class="border border-carbon/15 overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[540px]">
+              <iframe class="map-grayscale w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1165.157589499098!2d-74.7845402753069!3d10.803088676478307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d1002c94a463%3A0x1feca532b2c9e691!2sCABA%C3%91A%20LA%20MARTINA!5e0!3m2!1ses!2sco!4v1782086919074!5m2!1ses!2sco"
+                loading="lazy" title="Ubicación Cabaña La Martina — Sabanagrande, Atlántico" style="border:0;"
+                allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== 11. FOOTER ====================== -->
+  <footer class="bg-carbon text-sand pt-16 pb-8">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-14">
+        <div class="md:col-span-5">
+          <img src="IMG/logo-positivo.webp" alt="Logo Cabaña La Martina" class="h-[78px] lg:h-[84px] mb-5">
+          <p class="text-sand/60 text-sm leading-relaxed max-w-md">Una cabaña privada en Sabanagrande, Atlántico.
+            Naturaleza, descanso y diversión en familia o con amigos.</p>
+        </div>
+        <div class="md:col-span-3">
+          <div class="eyebrow text-gold mb-5">Contacto</div>
+          <ul class="space-y-3 text-sm text-sand/75">
+            <li class="flex gap-3 items-center"><iconify-icon icon="ph:whatsapp-logo-light" width="16"
+                class="text-gold"></iconify-icon> +57 301 578 0509</li>
+            <li class="flex gap-3 items-center"><iconify-icon icon="ph:envelope-light" width="16"
+                class="text-gold"></iconify-icon> info.lamartina.co@gmail.com</li>
+            <li class="flex gap-3 items-center"><iconify-icon icon="ph:instagram-logo-light" width="16"
+                class="text-gold"></iconify-icon> @cabana_la_martina</li>
+          </ul>
+        </div>
+        <div class="md:col-span-4">
+          <div class="eyebrow text-gold mb-5">Cancelaciones</div>
+          <p class="text-sand/60 text-sm leading-relaxed">El depósito de reserva es reembolsable hasta 7 días antes de
+            la fecha confirmada. Dentro de los 7 días previos, el depósito no es reembolsable. El depósito de daños
+            ($300.000 COP) se devuelve íntegramente tras verificación al check-out.</p>
+        </div>
+      </div>
+      <div class="divider-line opacity-20 mb-6"></div>
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-sand/40 tracking-[0.2em] uppercase">
+        <div>© 2025 Cabaña La Martina · Todos los derechos reservados</div>
+        <div>Sabanagrande · Atlántico · Colombia</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================== ANIMAL LIGHTBOX DIALOG ====================== -->
+  <dialog id="animal-dialog" class="bg-transparent backdrop:bg-carbon/75 backdrop:backdrop-blur-sm p-4 w-full max-w-2xl focus:outline-none overflow-visible">
+    <div class="relative bg-sand border border-carbon/15 rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] md:max-h-none">
+      <!-- Close Button -->
+      <button onclick="closeAnimalDialog()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-carbon/80 text-sand flex items-center justify-center hover:bg-carbon hover:scale-105 transition-all focus:outline-none" aria-label="Cerrar modal">
+        <iconify-icon icon="ph:x-bold" width="16"></iconify-icon>
+      </button>
+
+      <!-- Left / Top: Image -->
+      <div class="w-full md:w-1/2 aspect-[4/3] md:aspect-auto md:h-96 overflow-hidden">
+        <img id="dialog-animal-img" src="" alt="" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- Right / Bottom: Content -->
+      <div class="w-full md:w-1/2 p-6 lg:p-8 flex flex-col justify-center">
+        <div class="eyebrow text-gold mb-2" id="dialog-animal-en"></div>
+        <h3 class="font-serif text-3xl lg:text-4xl text-carbon mb-4" id="dialog-animal-name"></h3>
+        <p class="text-sm text-carbon/75 leading-relaxed mb-6" id="dialog-animal-desc"></p>
+        
+        <div id="dialog-animal-feed-badge" class="mt-auto">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ====================== WHATSAPP FLOATING CHATBOT ====================== -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+
+    <div id="wa-chatbox"
+      class="wa-hidden w-[340px] max-w-[calc(100vw-3rem)] bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col border border-carbon/10">
+      <!-- Header -->
+      <div class="bg-[#075E54] text-white p-4 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+          <img src="IMG/logo-positivo.webp" alt="La Martina" class="h-8 w-8 object-contain">
+        </div>
+        <div class="flex-1">
+          <div class="font-semibold text-sm">Concierge La Martina</div>
+          <div class="text-[11px] text-white/80 flex items-center gap-1.5">
+            <span class="w-2 h-2 bg-green-400 rounded-full"></span> En línea ahora
+          </div>
+        </div>
+        <button onclick="toggleChatbox()" class="text-white/80 hover:text-white">
+          <iconify-icon icon="ph:x-light" width="20"></iconify-icon>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="bg-[#ECE5DD] p-4 h-64 overflow-y-auto flex flex-col gap-3">
+        <div class="bg-white rounded-lg p-3 shadow-sm self-start max-w-[85%] text-sm text-carbon/90">
+          ¡Hola! 👋 Bienvenido a Cabaña La Martina en Sabanagrande. ¿Quieres cotizar tu estadía, consultar fechas
+          disponibles o resolver una duda? Escríbenos y te ayudaremos enseguida.
+        </div>
+      </div>
+      <!-- Input -->
+      <div class="bg-[#F0F0F0] p-2 flex items-center gap-2">
+        <input type="text" id="wa-input"
+          class="flex-1 bg-white rounded-full px-4 py-2 text-sm border border-carbon/10 focus:outline-none focus:border-[#25D366]"
+          placeholder="Escribe tu mensaje...">
+        <button onclick="sendWaMessage()"
+          class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center text-white hover:bg-[#1da851] transition">
+          <iconify-icon icon="ph:paper-plane-right-fill" width="18"></iconify-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Button -->
+    <button id="wa-fab" onclick="toggleChatbox()"
+      class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform relative">
+      <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
+      <iconify-icon icon="ph:whatsapp-logo-fill" width="32" class="text-white relative z-10"></iconify-icon>
+    </button>
+
+  </div>
+
+</body>
+
+</html>

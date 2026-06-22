@@ -1,0 +1,488 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f6efe5;
+  color: #1c1c1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: .15s;
+}
+
+.reveal-delay-2 {
+  transition-delay: .3s;
+}
+
+.reveal-delay-3 {
+  transition-delay: .45s;
+}
+
+.reveal-delay-4 {
+  transition-delay: .6s;
+}
+
+/* Editorial small caps label */
+.eyebrow {
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Horizontal scroll hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Map grayscale */
+.map-grayscale {
+  filter: grayscale(1) contrast(1.05) brightness(0.92);
+}
+
+/* Nav */
+#nav {
+  transition: background-color .6s ease, border-color .6s ease, padding .4s ease;
+}
+
+.nav-scrolled {
+  background-color: rgba(28, 28, 26, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(190, 127, 0, 0.18);
+}
+
+.nav-top {
+  background-color: transparent;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width .5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Cards */
+.lux-card {
+  transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .7s ease, border-color .5s ease;
+}
+
+.lux-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -30px rgba(28, 28, 26, 0.25);
+}
+
+/* Buttons */
+.btn-lux {
+  transition: all .45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-lux:hover {
+  transform: translateY(-1px);
+  letter-spacing: 0.28em;
+}
+
+.btn-primary {
+  background: #555b00;
+  color: #f6efe5;
+}
+
+.btn-primary:hover {
+  background: #1c1c1a;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(246, 239, 229, 0.5);
+  color: #f6efe5;
+}
+
+.btn-ghost:hover {
+  background: #f6efe5;
+  color: #1c1c1a;
+  border-color: #f6efe5;
+}
+
+/* Inputs */
+.lux-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(28, 28, 26, 0.22);
+  padding: 14px 2px;
+  transition: border-color .4s ease;
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: #1c1c1a;
+}
+
+.lux-input:focus {
+  outline: none;
+  border-bottom-color: #555b00;
+}
+
+.lux-input::placeholder {
+  color: rgba(28, 28, 26, 0.4);
+}
+
+/* Notification */
+#notification {
+  transition: opacity .45s ease, transform .45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.notif-hidden {
+  opacity: 0;
+  transform: translateY(-20px) translateX(-50%);
+  pointer-events: none;
+}
+
+.notif-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(-50%);
+}
+
+/* Room tabs */
+.room-tab {
+  transition: all .45s ease;
+  cursor: pointer;
+}
+
+.room-tab.active {
+  background: #1c1c1a;
+  color: #f6efe5;
+  border-color: #1c1c1a;
+}
+
+.room-tab.active .tab-num {
+  color: #be7f00;
+}
+
+/* Plan cards */
+.plan-card {
+  transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.plan-card.selected {
+  border-color: #555b00 !important;
+  background: rgba(85, 91, 0, 0.06);
+}
+
+.plan-card.selected .plan-radio {
+  background: #555b00;
+  border-color: #555b00;
+}
+
+.plan-card.selected .plan-radio::after {
+  opacity: 1;
+}
+
+.plan-radio {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid rgba(28, 28, 26, 0.4);
+  border-radius: 50%;
+  position: relative;
+  transition: all .3s;
+}
+
+.plan-radio::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #f6efe5;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+/* Step indicator */
+.step-dot {
+  transition: all .5s ease;
+}
+
+.step-dot.active {
+  background: #555b00;
+  color: #f6efe5;
+}
+
+.step-dot.done {
+  background: #1c1c1a;
+  color: #f6efe5;
+}
+
+/* Step panel */
+.step-panel {
+  display: none;
+}
+
+.step-panel.active {
+  display: block;
+  animation: fadeUp .6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Calendar */
+.cal-day {
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.cal-day:hover:not(.disabled):not(.empty) {
+  background: #eae3d5;
+}
+
+.cal-day.selected {
+  background: #555b00 !important;
+  color: #f6efe5 !important;
+}
+
+.cal-day.in-range {
+  background: rgba(85, 91, 0, 0.15);
+  color: #1c1c1a;
+}
+
+.cal-day.disabled {
+  color: rgba(28, 28, 26, 0.25);
+  cursor: not-allowed;
+}
+
+.cal-day.today {
+  font-weight: 700;
+}
+
+/* Scrollbar global */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6efe5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555b00;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1c1c1a;
+}
+
+/* Hide video controls */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/* Hero gradient */
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(28, 28, 26, 0.55) 0%, rgba(28, 28, 26, 0.25) 35%, rgba(28, 28, 26, 0.65) 100%);
+}
+
+/* Drop cap */
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.8rem;
+  line-height: 0.85;
+  float: left;
+  padding-right: 0.6rem;
+  padding-top: 0.4rem;
+  color: #555b00;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Number ticker */
+.num-display {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mobile menu */
+#mobile-menu {
+  transition: opacity .4s ease, transform .4s ease;
+}
+
+.mobile-menu-hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* Decorative divider */
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(28, 28, 26, 0.3), transparent);
+}
+
+/* Smooth image zoom */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* Selection */
+::selection {
+  background: #555b00;
+  color: #f6efe5;
+}
+
+/* Wildlife card */
+.wildlife-card {
+  flex: 0 0 280px;
+  transition: transform .6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wildlife-card:hover {
+  transform: translateY(-6px);
+}
+
+.wildlife-card .img-wrap {
+  transition: transform .6s ease;
+}
+
+.wildlife-card:hover .img-wrap {
+  transform: scale(1.03);
+}
+
+/* Counter wheel */
+.counter-btn {
+  transition: all .3s;
+}
+
+.counter-btn:hover {
+  background: #1c1c1a;
+  color: #f6efe5;
+}
+
+/* Logo drop shadow on hero */
+.logo-hero {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* WhatsApp Chatbox */
+#wa-chatbox {
+  transition: opacity .4s ease, transform .4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wa-hidden {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+}
+
+.wa-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Responsive aspect ratio for 360 Tour container to prevent image cropping */
+.tour-360-ratio {
+  aspect-ratio: 1086 / 1448;
+}
+
+@media (min-width: 768px) {
+  .tour-360-ratio {
+    aspect-ratio: 1484 / 1060;
+  }
+}
+
+/* Hero entrance animation delays for a subtle, professional pace */
+.hero-eyebrow {
+  transition-delay: 0.1s !important;
+}
+
+.hero-h1 {
+  transition-delay: 0.5s !important;
+}
+
+.hero-p {
+  transition-delay: 1.2s !important;
+}
+
+.hero-btns {
+  transition-delay: 1.9s !important;
+}
+
+/* Dialog animation */
+dialog[open] {
+  animation: zoomIn .45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+dialog::backdrop {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+dialog[open]::backdrop {
+  opacity: 1;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
