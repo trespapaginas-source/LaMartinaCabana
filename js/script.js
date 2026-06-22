@@ -359,6 +359,19 @@ document.querySelectorAll('.step-item').forEach(item => {
    CALENDAR
 ============================================ */
 const MONTH_NAMES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+let bookedEvents = [];
+
+function isDateBooked(dateObj) {
+  const d = new Date(dateObj).setHours(0, 0, 0, 0);
+  return bookedEvents.some(event => {
+    const start = new Date(event.start).setHours(0, 0, 0, 0);
+    const end = new Date(event.end).setHours(0, 0, 0, 0);
+    if (start === end) {
+      return d === start;
+    }
+    return d >= start && d < end;
+  });
+}
 
 function renderCalendar() {
   const isOvernight = PLANS[reservationState.plan].overnight;
@@ -382,7 +395,11 @@ function renderCalendar() {
     cell.className = 'cal-day h-11 flex items-center justify-center text-sm border border-transparent';
     const dateObj = new Date(reservationState.calYear, reservationState.calMonth, d);
     dateObj.setHours(0, 0, 0, 0);
-    if (dateObj < today) cell.classList.add('disabled');
+    if (dateObj < today) {
+      cell.classList.add('disabled');
+    } else if (isDateBooked(dateObj)) {
+      cell.classList.add('booked', 'disabled');
+    }
     if (dateObj.getTime() === today.getTime()) cell.classList.add('today');
     cell.textContent = d;
     cell.dataset.date = dateObj.toISOString();
@@ -409,6 +426,20 @@ function onDateClick(dateObj) {
       reservationState.dateCheckIn = dateObj;
       reservationState.dateCheckOut = null;
     } else {
+      // Verificar si hay fechas ya reservadas en el rango intermedio
+      let temp = new Date(reservationState.dateCheckIn);
+      let hasBlockedDate = false;
+      while (temp < dateObj) {
+        if (isDateBooked(temp)) {
+          hasBlockedDate = true;
+          break;
+        }
+        temp.setDate(temp.getDate() + 1);
+      }
+      if (hasBlockedDate) {
+        showNotification('El período seleccionado incluye días ya reservados.');
+        return;
+      }
       reservationState.dateCheckOut = dateObj;
     }
   }
@@ -582,3 +613,68 @@ Quedo atento/a a la confirmación de disponibilidad y a las instrucciones para e
     runInit();
   }
 })();
+
+/* ============================================
+   GOOGLE CALENDAR SYNC (iCAL)
+============================================ */
+async function fetchBookedEvents() {
+  try {
+    const response = await fetch('/api/ical');
+    if (!response.ok) throw new Error('No se pudo obtener la disponibilidad.');
+    const text = await response.text();
+    bookedEvents = parseICal(text);
+    renderCalendar();
+  } catch (error) {
+    console.error('Error al sincronizar el calendario:', error);
+  }
+}
+
+function parseICal(icalText) {
+  const lines = icalText.split(/\r?\n/);
+  const events = [];
+  let currentEvent = null;
+
+  for (let line of lines) {
+    if (line.startsWith('BEGIN:VEVENT')) {
+      currentEvent = {};
+    } else if (line.startsWith('END:VEVENT')) {
+      if (currentEvent && currentEvent.start && currentEvent.end) {
+        events.push(currentEvent);
+      }
+      currentEvent = null;
+    } else if (currentEvent) {
+      if (line.startsWith('DTSTART')) {
+        const parts = line.split(':');
+        const val = parts[1];
+        currentEvent.start = parseICalDate(val);
+      } else if (line.startsWith('DTEND')) {
+        const parts = line.split(':');
+        const val = parts[1];
+        currentEvent.end = parseICalDate(val);
+      }
+    }
+  }
+  return events;
+}
+
+function parseICalDate(icalStr) {
+  const cleanStr = icalStr.replace(/[^0-9T]/g, '');
+  const y = parseInt(cleanStr.substring(0, 4));
+  const m = parseInt(cleanStr.substring(4, 6)) - 1;
+  const d = parseInt(cleanStr.substring(6, 8));
+  if (cleanStr.includes('T')) {
+    const h = parseInt(cleanStr.substring(9, 11)) || 0;
+    const min = parseInt(cleanStr.substring(11, 13)) || 0;
+    const s = parseInt(cleanStr.substring(13, 15)) || 0;
+    return new Date(Date.UTC(y, m, d, h, min, s));
+  } else {
+    return new Date(y, m, d, 0, 0, 0);
+  }
+}
+
+// Fetch availability on load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', fetchBookedEvents);
+} else {
+  fetchBookedEvents();
+}

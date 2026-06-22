@@ -293,6 +293,13 @@ body {
   cursor: not-allowed;
 }
 
+.cal-day.booked {
+  color: rgba(28, 28, 26, 0.35) !important;
+  text-decoration: line-through !important;
+  background: rgba(28, 28, 26, 0.05) !important;
+  cursor: not-allowed !important;
+}
+
 .cal-day.today {
   font-weight: 700;
 }
