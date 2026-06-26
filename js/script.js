@@ -220,33 +220,48 @@ function loadTour360() {
 }
 
 /* ============================================
-   WHATSAPP CHATBOT
+   INSTAGRAM CHATBOT
 ============================================ */
-const waChatbox = document.getElementById('wa-chatbox');
-let waAutoOpened = false;
+const igChatbox = document.getElementById('ig-chatbox');
+let igAutoOpened = false;
 
 function toggleChatbox() {
-  if (waChatbox) {
-    waChatbox.classList.toggle('wa-hidden');
-    waChatbox.classList.toggle('wa-visible');
+  if (igChatbox) {
+    igChatbox.classList.toggle('ig-hidden');
+    igChatbox.classList.toggle('ig-visible');
   }
 }
 
-function sendWaMessage() {
-  const input = document.getElementById('wa-input');
+function sendIgMessage() {
+  const input = document.getElementById('ig-input');
   const text = input ? input.value.trim() : '';
   if (text) {
-    const url = `https://wa.me/573015780509?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
+    // Copy message to clipboard for convenience
+    navigator.clipboard.writeText(text).catch(() => {});
+    // Open Instagram DM
+    window.open('https://ig.me/m/cabana_la_martina', '_blank');
     input.value = '';
+    showNotification('Mensaje copiado al portapapeles. Pégalo en el chat de Instagram.');
   }
 }
+
+// Add enter key support for the chatbot input
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('ig-input');
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        sendIgMessage();
+      }
+    });
+  }
+});
 
 // Auto-open after 7 seconds
 setTimeout(() => {
-  if (waChatbox && waChatbox.classList.contains('wa-hidden')) {
+  if (igChatbox && igChatbox.classList.contains('ig-hidden')) {
     toggleChatbox();
-    waAutoOpened = true;
+    igAutoOpened = true;
   }
 }, 7000);
 
@@ -503,36 +518,53 @@ function renderSummary() {
 }
 
 /* ============================================
-   WHATSAPP SUBMISSION
+   INSTAGRAM DM SUBMISSION
 ============================================ */
 function submitReservation() {
   const plan = PLANS[reservationState.plan];
-  const phone = '573015780509';
 
   let dateLine = plan.overnight
     ? `• Check-in: ${formatDate(reservationState.dateCheckIn)}\n• Check-out: ${formatDate(reservationState.dateCheckOut)}`
     : `• Fecha: ${formatDate(reservationState.dateCheckIn)} (9:00 AM – 5:00 PM)`;
 
-  let phoneLine = reservationState.phone ? `*Teléfono:* ${reservationState.phone}\n` : '';
+  let phoneLine = reservationState.phone ? `Teléfono: ${reservationState.phone}\n` : '';
 
   const message =
-    `*RESERVA — CABAÑA LA MARTINA*
+    `RESERVA — CABAÑA LA MARTINA
 
 ¡Hola! Me gustaría solicitar una reserva para mi escapada.
 
-*Modalidad:* ${plan.name}
-*Huésped titular:* ${reservationState.guestName}
- ${phoneLine}${dateLine}
-*Huéspedes:* ${reservationState.guestCount} / ${plan.maxGuests}
+Modalidad: ${plan.name}
+Huésped titular: ${reservationState.guestName}
+${phoneLine}${dateLine}
+Huéspedes: ${reservationState.guestCount} / ${plan.maxGuests}
 
-*Tarifa:* $${plan.price.toLocaleString('es-CO')} COP
-*Depósito de reserva:* $${plan.deposit.toLocaleString('es-CO')} COP
-*Depósito de daños (reembolsable):* $300.000 COP
+Tarifa: $${plan.price.toLocaleString('es-CO')} COP
+Depósito de reserva: $${plan.deposit.toLocaleString('es-CO')} COP
+Depósito de daños (reembolsable): $300.000 COP
 
 Quedo atento/a a la confirmación de disponibilidad y a las instrucciones para el pago. ¡Muchas gracias!`;
 
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
+  // Copy message to clipboard
+  navigator.clipboard.writeText(message).then(() => {
+    showNotification('✅ Mensaje de reserva copiado. Pégalo en el chat de Instagram.');
+  }).catch(() => {
+    // Fallback for older browsers
+    const textarea = document.createElement('textarea');
+    textarea.value = message;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showNotification('✅ Mensaje de reserva copiado. Pégalo en el chat de Instagram.');
+  });
+
+  // Open Instagram DM after a brief delay
+  setTimeout(() => {
+    window.open('https://ig.me/m/cabana_la_martina', '_blank');
+  }, 600);
 }
 
 /* ============================================

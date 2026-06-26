@@ -424,21 +424,56 @@ video::-webkit-media-controls-enclosure {
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
-/* WhatsApp Chatbox */
-#wa-chatbox {
+/* Instagram Chatbox */
+#ig-chatbox {
   transition: opacity .4s ease, transform .4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.wa-hidden {
+#ig-input:focus {
+  border-color: #dc2743 !important;
+}
+
+.ig-hidden {
   opacity: 0;
   transform: translateY(20px) scale(0.95);
   pointer-events: none;
 }
 
-.wa-visible {
+.ig-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
+}
+
+/* Instagram gradient for floating button and chatbox header */
+.ig-gradient {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+#ig-fab {
+  transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .3s ease;
+}
+
+#ig-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(225, 48, 108, 0.45);
+}
+
+/* Pulse animation for Instagram FAB */
+#ig-fab::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f09433 0%, #dc2743 50%, #bc1888 100%);
+  opacity: 0;
+  z-index: 0;
+  animation: igPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes igPulse {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.25); }
 }
 
 /* Responsive aspect ratio for 360 Tour container to prevent image cropping */

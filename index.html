@@ -47,7 +47,7 @@
   "description": "Cabaña totalmente privada en Sabanagrande, Atlántico. Alquiler exclusivo para familias o grupos. Piscina, jacuzzi, fauna y naturaleza.",
   "image": "https://cabana-lamartina.com/IMG/fondo-web.webp",
   "logo": "https://cabana-lamartina.com/IMG/logo-positivo.webp",
-  "telephone": "+573015780509",
+  "sameAs": ["https://www.instagram.com/cabana_la_martina"],
   "url": "https://cabana-lamartina.com",
   "priceRange": "$$$",
   "address": {
@@ -811,7 +811,7 @@
                 <input type="text" id="guest-name" class="lux-input" placeholder="Tu nombre" />
               </div>
               <div>
-                <label for="guest-phone" class="eyebrow text-carbon/60 mb-3 block">Teléfono / WhatsApp (Opcional)</label>
+                <label for="guest-phone" class="eyebrow text-carbon/60 mb-3 block">Teléfono (Opcional)</label>
                 <input type="tel" id="guest-phone" class="lux-input" placeholder="+57 300 000 0000" />
               </div>
             </div>
@@ -962,9 +962,10 @@
                 class="btn-lux text-[11px] uppercase tracking-[0.24em] px-7 py-4 border border-carbon/30 hover:bg-carbon hover:text-sand flex items-center gap-2"><iconify-icon
                   icon="ph:arrow-left-light" width="16"></iconify-icon> Atrás</button>
               <button onclick="submitReservation()"
-                class="btn-lux text-[11px] uppercase tracking-[0.24em] px-8 py-4 bg-[#25D366] text-white hover:bg-[#1da851] flex items-center gap-2">
-                <iconify-icon icon="ph:whatsapp-logo-light" width="18"></iconify-icon>
-                Enviar Solicitud
+                class="btn-lux text-[11px] uppercase tracking-[0.24em] px-8 py-4 text-white hover:opacity-90 flex items-center gap-2"
+                style="background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)">
+                <iconify-icon icon="ph:instagram-logo-light" width="18"></iconify-icon>
+                Enviar Solicitud por Instagram
               </button>
             </div>
           </div>
@@ -1054,12 +1055,10 @@
         <div class="md:col-span-3">
           <div class="eyebrow text-gold mb-5">Contacto</div>
           <ul class="space-y-3 text-sm text-sand/75">
-            <li class="flex gap-3 items-center"><iconify-icon icon="ph:whatsapp-logo-light" width="16"
-                class="text-gold"></iconify-icon> +57 301 578 0509</li>
+            <li class="flex gap-3 items-center"><iconify-icon icon="ph:instagram-logo-light" width="16"
+                class="text-gold"></iconify-icon> <a href="https://ig.me/m/cabana_la_martina" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">@cabana_la_martina</a></li>
             <li class="flex gap-3 items-center"><iconify-icon icon="ph:envelope-light" width="16"
                 class="text-gold"></iconify-icon> info.lamartina.co@gmail.com</li>
-            <li class="flex gap-3 items-center"><iconify-icon icon="ph:instagram-logo-light" width="16"
-                class="text-gold"></iconify-icon> @cabana_la_martina</li>
           </ul>
         </div>
         <div class="md:col-span-4">
@@ -1104,13 +1103,13 @@
     </div>
   </dialog>
 
-  <!-- ====================== WHATSAPP FLOATING CHATBOT ====================== -->
+  <!-- ====================== INSTAGRAM FLOATING CHATBOT ====================== -->
   <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 pointer-events-none">
 
-    <div id="wa-chatbox"
-      class="wa-hidden w-[340px] max-w-[calc(100vw-3rem)] bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col border border-carbon/10">
+    <div id="ig-chatbox"
+      class="ig-hidden w-[340px] max-w-[calc(100vw-3rem)] bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col border border-carbon/10">
       <!-- Header -->
-      <div class="bg-[#075E54] text-white p-4 flex items-center gap-3">
+      <div class="ig-gradient text-white p-4 flex items-center gap-3">
         <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
           <img src="IMG/logo-positivo.webp" alt="La Martina" width="1254" height="1254" class="h-8 w-8 object-contain">
         </div>
@@ -1120,12 +1119,12 @@
             <span class="w-2 h-2 bg-green-400 rounded-full"></span> En línea ahora
           </div>
         </div>
-        <button onclick="toggleChatbox()" aria-label="Cerrar chat de WhatsApp" class="text-white/80 hover:text-white">
+        <button onclick="toggleChatbox()" aria-label="Cerrar chat de Instagram" class="text-white/80 hover:text-white">
           <iconify-icon icon="ph:x-light" width="20"></iconify-icon>
         </button>
       </div>
       <!-- Body -->
-      <div class="bg-[#ECE5DD] p-4 h-64 overflow-y-auto flex flex-col gap-3">
+      <div class="bg-[#fafafa] p-4 h-64 overflow-y-auto flex flex-col gap-3">
         <div class="bg-white rounded-lg p-3 shadow-sm self-start max-w-[85%] text-sm text-carbon/90">
           ¡Hola! 👋 Bienvenido a Cabaña La Martina en Sabanagrande. ¿Quieres cotizar tu estadía, consultar fechas
           disponibles o resolver una duda? Escríbenos y te ayudaremos enseguida.
@@ -1133,21 +1132,21 @@
       </div>
       <!-- Input -->
       <div class="bg-[#F0F0F0] p-2 flex items-center gap-2">
-        <input type="text" id="wa-input"
-          class="flex-1 bg-white rounded-full px-4 py-2 text-sm border border-carbon/10 focus:outline-none focus:border-[#25D366]"
+        <input type="text" id="ig-input"
+          class="flex-1 bg-white rounded-full px-4 py-2 text-sm border border-carbon/10 focus:outline-none"
           placeholder="Escribe tu mensaje...">
-        <button onclick="sendWaMessage()" aria-label="Enviar mensaje de WhatsApp"
-          class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center text-white hover:bg-[#1da851] transition">
+        <button onclick="sendIgMessage()" aria-label="Enviar mensaje por Instagram"
+          class="w-10 h-10 ig-gradient rounded-full flex items-center justify-center text-white hover:opacity-90 transition shrink-0">
           <iconify-icon icon="ph:paper-plane-right-fill" width="18"></iconify-icon>
         </button>
       </div>
     </div>
 
     <!-- Floating Button -->
-    <button id="wa-fab" onclick="toggleChatbox()" aria-label="Abrir chat de WhatsApp"
-      class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform relative pointer-events-auto">
-      <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
-      <iconify-icon icon="ph:whatsapp-logo-fill" width="32" class="text-white relative z-10"></iconify-icon>
+    <button id="ig-fab" onclick="toggleChatbox()" aria-label="Abrir chat de Instagram"
+      class="w-16 h-16 ig-gradient rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform relative pointer-events-auto">
+      <span class="absolute inset-0 rounded-full ig-gradient animate-ping opacity-20"></span>
+      <iconify-icon icon="ph:instagram-logo-fill" width="32" class="text-white relative z-10"></iconify-icon>
     </button>
 
   </div>
