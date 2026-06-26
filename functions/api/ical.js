@@ -1,5 +1,5 @@
 export async function onRequest(context) {
-  const CALENDAR_URL = "https://calendar.google.com/calendar/ical/info.lamartina.co%40gmail.com/public/basic.ics";
+  const CALENDAR_URL = "https://calendar.google.com/calendar/ical/canaguates228%40gmail.com/public/basic.ics";
 
   try {
     const res = await fetch(CALENDAR_URL);

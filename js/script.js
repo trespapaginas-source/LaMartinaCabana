@@ -377,14 +377,15 @@ const MONTH_NAMES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Jul
 let bookedEvents = [];
 
 function isDateBooked(dateObj) {
-  const d = new Date(dateObj).setHours(0, 0, 0, 0);
+  const dayStart = new Date(dateObj);
+  dayStart.setHours(0, 0, 0, 0);
+  const dayEnd = new Date(dayStart);
+  dayEnd.setDate(dayEnd.getDate() + 1);
+
   return bookedEvents.some(event => {
-    const start = new Date(event.start).setHours(0, 0, 0, 0);
-    const end = new Date(event.end).setHours(0, 0, 0, 0);
-    if (start === end) {
-      return d === start;
-    }
-    return d >= start && d < end;
+    const eventStart = new Date(event.start);
+    const eventEnd = new Date(event.end);
+    return eventStart < dayEnd && eventEnd > dayStart;
   });
 }
 
@@ -676,12 +677,12 @@ function parseICal(icalText) {
       currentEvent = null;
     } else if (currentEvent) {
       if (line.startsWith('DTSTART')) {
-        const parts = line.split(':');
-        const val = parts[1];
+        const idx = line.indexOf(':');
+        const val = line.substring(idx + 1);
         currentEvent.start = parseICalDate(val);
       } else if (line.startsWith('DTEND')) {
-        const parts = line.split(':');
-        const val = parts[1];
+        const idx = line.indexOf(':');
+        const val = line.substring(idx + 1);
         currentEvent.end = parseICalDate(val);
       }
     }
